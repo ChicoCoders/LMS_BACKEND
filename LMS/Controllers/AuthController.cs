@@ -2,9 +2,11 @@
 using LMS.Helpers;
 using LMS.Repository;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
+using Org.BouncyCastle.Crypto;
 
 namespace LMS.Controllers
 {
@@ -15,6 +17,7 @@ namespace LMS.Controllers
         private readonly DataContext _Context;
         private readonly JWTService _jwtService;
         private readonly IUserService _userService;
+        
         public AuthController(DataContext context, JWTService jwt, IUserService userService)
         {
             _Context = context;
@@ -31,7 +34,7 @@ namespace LMS.Controllers
             {
                 return BadRequest("User not found");
             }
-            if(user.Password != request.password)
+            if (!(BCrypt.Net.BCrypt.Verify( request.password, user.Password)))
             {
                 return BadRequest("Wrong Password");
 
@@ -42,16 +45,16 @@ namespace LMS.Controllers
                 password = user.Password,
             };
 
-            var jwt = _jwtService.Generate(user.UserName);
+            var jwt = _jwtService.Generate(user.UserName,user.UserType);
 
             Response.Cookies.Append("jwt", jwt, new CookieOptions
             {
-                HttpOnly = true
+                HttpOnly = false
             }
             );
 
             return Ok(new{
-                message="success"
+                message="success",
             });
         }
 
@@ -77,6 +80,7 @@ namespace LMS.Controllers
         public async Task<IActionResult> LogOut()
         {
             Response.Cookies.Delete("jwt");
+
 
             return Ok(
                 new

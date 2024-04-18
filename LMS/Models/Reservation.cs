@@ -10,11 +10,11 @@ namespace LMS.Models
         
         public string ReservationNo { get; set; }
         
-        public string IssuedDate { get; set; }
+        public DateOnly IssuedDate { get; set; }
         
-        public string DueDate {  get; set; }
+        public DateOnly DueDate {  get; set; }
         
-        public string ReturnDate { get; set; }
+        public DateOnly ReturnDate { get; set; }
         
         public string Status { get; set; }
         

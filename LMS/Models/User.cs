@@ -16,7 +16,7 @@ namespace LMS.Models
         [EmailAddress]
         public string Email { get; set; }
         [Required]
-        public string DOB {  get; set; }
+        public DateOnly DOB {  get; set; }
         [Required]
         public string Address {  get; set; }
         [Required]
@@ -34,7 +34,7 @@ namespace LMS.Models
         [Required]
         public User AddedBy { get; set; }
 
-        public List<Notification> Notification { get; set; }
+        
         public List<Reservation> Reservations { get; set; }
 
         public List<RequestResource> requests { get; set; }

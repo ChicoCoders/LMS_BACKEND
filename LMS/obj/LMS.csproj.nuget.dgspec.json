@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\LMS_BackEnd\\LMS\\LMS\\LMS.csproj": {}
+    "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\LMS.csproj": {}
   },
   "projects": {
-    "D:\\LMS_BackEnd\\LMS\\LMS\\LMS.csproj": {
+    "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\LMS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LMS_BackEnd\\LMS\\LMS\\LMS.csproj",
+        "projectUniqueName": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\LMS.csproj",
         "projectName": "LMS",
-        "projectPath": "D:\\LMS_BackEnd\\LMS\\LMS\\LMS.csproj",
-        "packagesPath": "C:\\Users\\HP- i5 Desktop\\.nuget\\packages\\",
-        "outputPath": "D:\\LMS_BackEnd\\LMS\\LMS\\obj\\",
+        "projectPath": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\LMS.csproj",
+        "packagesPath": "C:\\Users\\Arambage K D\\.nuget\\packages\\",
+        "outputPath": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\HP- i5 Desktop\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Arambage K D\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +38,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -44,9 +53,37 @@
               "target": "Package",
               "version": "[4.0.3, )"
             },
+            "Hangfire": {
+              "target": "Package",
+              "version": "[1.8.12, )"
+            },
+            "Hangfire.Core": {
+              "target": "Package",
+              "version": "[1.8.12, )"
+            },
+            "Hangfire.SqlServer": {
+              "target": "Package",
+              "version": "[1.8.12, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "Microsoft.AspNet.SignalR.Core": {
+              "target": "Package",
+              "version": "[2.4.3, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.AspNetCore.Cors": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.0.4, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -100,7 +137,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -10,8 +10,10 @@
         public float Price { get; set; }
         public int Pages { get; set; }
         public int Quantity { get; set; }
-        public int Location { get; set; }
-        public string AddededOn {  get; set; }
+        public int CupboardId { get; set; }
+        public int ShelfNo { get; set; }
+        public string Description {  get; set; }
+        public DateTime AddededOn {  get; set; }
         public string ImagePath {  get; set; }
         public string URL { get; set; }
 
@@ -19,6 +21,8 @@
 
     public class AddBookResponseDto
     {
+        public string ISBN {  set; get; }
 
+        public String Title {  get; set; }
     }
 }

@@ -15,7 +15,10 @@
         public string ISBN { get; set; }
         public string BorrowerID { get; set; }
         public string IssuedID {  get; set; }
-        public string DueDate { get; set; }
+        public string dueDate { get; set; }
+        public bool Email { get; set;}
+        
+
     }
     public class IssueBookResponseDto
 {
