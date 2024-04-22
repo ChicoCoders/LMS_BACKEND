@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Microsoft.VisualBasic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace LMS.Repository
@@ -310,6 +311,7 @@ namespace LMS.Repository
             foreach (var record in overdueRecords)
             {
                 record.Status = "overdue";
+                await _notificationService.SetRemind(record);
             }
 
             await _Context.SaveChangesAsync();

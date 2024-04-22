@@ -7,7 +7,7 @@ namespace LMS.Repository
 {
     public interface IUserService
     {
-        Task<CreateUserResponseDto> AddUser(CreateUserRequestDto userdto);
+        Task<CreateUserResponseDto> AddUser(CreateUserRequestDto userdto,HttpContext httpContext);
         Task<User> GetById( string userName);
         Task<bool> DeleteUser(string username);
         Task<AboutUserDto> AboutUser(string username);

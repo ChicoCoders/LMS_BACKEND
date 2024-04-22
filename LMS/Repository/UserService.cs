@@ -43,8 +43,9 @@ namespace LMS.Repository
             string countString = count.ToString().PadLeft(5, '0');
             return currentDate + countString;
         }
-        public async Task<CreateUserResponseDto> AddUser(CreateUserRequestDto userdto)
+        public async Task<CreateUserResponseDto> AddUser(CreateUserRequestDto userdto,HttpContext httpContext)
         {
+            var addedby = _jwt.GetUsername(httpContext);
             if (await _Context.Users.AnyAsync(e => e.Email == userdto.Email))
             {
                 throw new Exception("Email Already Exists");
@@ -67,7 +68,7 @@ namespace LMS.Repository
                     Password = BCrypt.Net.BCrypt.HashPassword(password),
                     NIC = userdto.NIC,
                     UserType = userdto.UserType,
-                    AddedById = "kavidil",
+                    AddedById = addedby,
                     Status = "free",
                 };
 

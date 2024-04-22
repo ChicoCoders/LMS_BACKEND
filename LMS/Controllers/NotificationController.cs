@@ -23,15 +23,22 @@ namespace LMS.Controllers
         }
 
         [HttpPost("SetRemind")]
-        public async Task<bool> SetRemind(RemindNotification remind)
+        public async Task<bool> SetRemind(Reservation reservation)
         {
-            return await _notificationService.SetRemind(remind);
+            return await _notificationService.SetRemind(reservation);
         }
 
         [HttpGet("GetNotificatons")]
         public async Task<List<NewNoticeDto>> GetNotification(string username)
         {
-           return await _notificationService.GetNotification(username);
+           var httpContext = HttpContext;
+           return await _notificationService.GetNotification(username,httpContext);
+        }
+
+        [HttpDelete("RemoveNotification")]
+        public async Task<bool> RemoveNotification(int id)
+        {
+            return await _notificationService.RemoveNotification(id);
         }
     }
 }

@@ -1,20 +1,26 @@
 ﻿using LMS.DTOs;
-
+using LMS.Hubs;
+using static LMS.Hubs.MyHub;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using LMS.Helpers;
+using LMS.EmailTemplates;
+using LMS.Models;
 
 namespace LMS.Repository
 {
     public class NotificationService:INotificationService
     {
         private readonly DataContext _Context;
- 
+       private readonly JWTService _jwtService;
+        private readonly IEmailService _emailService;
 
 
-        public NotificationService(DataContext Context)
+        public NotificationService(DataContext Context,JWTService jwtservice, IEmailService emailService)
         {
             _Context = Context;
-            
+            _jwtService = jwtservice;
+            _emailService = emailService;
         }
 
         public async Task<bool> NewNotice(NewNoticeDto newnotice)
@@ -24,9 +30,9 @@ namespace LMS.Repository
                 Title=newnotice.Subject,
                 ToUser=newnotice.UserName,
                 Description=newnotice.Description,
-                Date=new DateOnly(2023,11,02),
-                time=new TimeOnly(22,11)
-                
+                Date= DateOnly.FromDateTime(DateTime.Now),
+                time= TimeOnly.FromDateTime(DateTime.Now)
+
             };
             _Context.Notifications.Add(notice); 
             await _Context.SaveChangesAsync();
@@ -34,16 +40,21 @@ namespace LMS.Repository
         }
 
 
-        public async Task<List<NewNoticeDto>> GetNotification(string username)
+        public async Task<List<NewNoticeDto>> GetNotification(string username, HttpContext httpContext)
         {
             var notifications = new List<Notification>();
             if (username == "all")
             {
-                notifications = _Context.Notifications.ToList();
+                notifications = _Context.Notifications.Where(e => e.Type != "reservation").ToList();
             }
             else
             {
-                notifications = _Context.Notifications.Where(e => e.ToUser == username).ToList();
+                username = _jwtService.GetUsername(httpContext);
+                var user=await _Context.Users.FirstOrDefaultAsync(e=>e.UserName==username);
+                notifications = _Context.Notifications.Where(e => 
+                e.ToUser == username||
+                e.ToUser=="all"||
+                e.ToUser==user.UserType).ToList();
             }
             var notificationlist = new List<NewNoticeDto>();
             if (notifications != null)
@@ -52,6 +63,7 @@ namespace LMS.Repository
                 {
                     var y = new NewNoticeDto
                     {
+                        Id = x.Id,
                         UserName=x.ToUser,
                         Subject = x.Title,
                         Date = x.Date,
@@ -64,10 +76,22 @@ namespace LMS.Repository
             return notificationlist;
         }
 
-        public async Task<bool> SetRemind(RemindNotification remind)
+        public async Task<bool> SetRemind(Reservation reservation)
         {
-            var pastremind= _Context.RemindNotifications.FirstOrDefault();
-            pastremind.Content = remind.Content;
+            var newNotification = new Notification
+            {
+                Title = "Reservation Reminder",
+                Description = "The book " + reservation.ResourceId + " is overdue! Please return it by "+reservation.DueDate + " to avoid any fines.",
+                ToUser = reservation.BorrowerID,
+                Date = DateOnly.FromDateTime(DateTime.Now), 
+                time = TimeOnly.FromDateTime(DateTime.Now),
+                Type="remind"
+            };
+            var borrower = await _Context.Users.FirstOrDefaultAsync(e => e.UserName == reservation.BorrowerID);
+            var htmlBody = new EmailTemplate().RemindEmail(reservation);
+            await _emailService.SendEmail(htmlBody, borrower.Email, "Your Reservation is Overdue" );
+
+            await _Context.Notifications.AddAsync(newNotification);
             await _Context.SaveChangesAsync();
             return true;
         }
@@ -88,6 +112,18 @@ namespace LMS.Repository
                     Type="reservation"
                     
                 };
+
+                var notification2=new NoticeDto
+                {
+                    UserName = reservation.BorrowerID,
+                    Subject = "About Your ReservationNo : " + reservation.Id,
+                    Description = "There is a reservation",
+                    
+                };
+                
+                  
+                 var z = new MessagingHub(_Context);
+                 z.SendMessage(notification2);
                 _Context.Notifications.Add(notification);
                 await _Context.SaveChangesAsync();
 
@@ -124,6 +160,21 @@ namespace LMS.Repository
                 return false;
             }
 
+        }
+
+        public async Task<bool> RemoveNotification(int id)
+        {
+            var notification = await _Context.Notifications.FirstOrDefaultAsync(e => e.Id == id);
+            if (notification != null)
+            {
+                _Context.Notifications.Remove(notification);
+                await _Context.SaveChangesAsync();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

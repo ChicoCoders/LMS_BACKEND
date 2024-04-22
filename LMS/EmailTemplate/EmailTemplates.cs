@@ -1,5 +1,6 @@
 ﻿using LMS.DTOs;
 using LMS.Models;
+using LMS.Repository;
 using MimeKit;
 using MimeKit.Text;
 
@@ -122,74 +123,155 @@ namespace LMS.EmailTemplates
             {
                 Text = $@"
                 <!DOCTYPE html>
-<html lang=""en"">
-<head>
-<meta charset=""UTF-8"">
-<title>Welcome to Our Site!</title>
-<style>
-  body {{
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-  }}
-  .container {{
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }}
-  h1 {{
-    color: #007bff;
-  }}
-  ul {{
-    list-style-type: none;
-    padding: 0;
-  }}
-  ul li {{
-    margin-bottom: 10px;
-  }}
-  p {{
-    line-height: 1.6;
-  }}
-  footer {{
-    margin-top: 20px;
-    text-align: center;
-    color: #888;
-  }}
-</style>
-</head>
-<body>
+                        <html lang=""en"">
+                        <head>
+                        <meta charset=""UTF-8"">
+                        <title>Welcome to Our Site!</title>
+                        <style>
+                          body {{
+                            font-family: Arial, sans-serif;
+                            margin: 0;
+                            padding: 0;
+                            background-color: #f4f4f4;
+                            color: #333;
+                          }}
+                          .container {{
+                            max-width: 600px;
+                            margin: 20px auto;
+                            padding: 20px;
+                            background-color: #fff;
+                            border-radius: 8px;
+                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                          }}
+                          h1 {{
+                            color: #007bff;
+                          }}
+                          ul {{
+                            list-style-type: none;
+                            padding: 0;
+                          }}
+                          ul li {{
+                            margin-bottom: 10px;
+                          }}
+                          p {{
+                            line-height: 1.6;
+                          }}
+                          footer {{
+                            margin-top: 20px;
+                            text-align: center;
+                            color: #888;
+                          }}
+                        </style>
+                        </head>
+                        <body>
 
-  <div class=""container"">
-    <h1>Welcome to Our Site!</h1>
+                          <div class=""container"">
+                            <h1>Welcome to Our Site!</h1>
 
-    <p>Hello Patron,</p>
+                            <p>Hello Patron,</p>
 
-    <p>Welcome to our website! We are excited to have you on board. As you are logging in for the first time, here are your password :</p>
+                            <p>Welcome to our website! We are excited to have you on board. As you are logging in for the first time, here are your password :</p>
 
-    <ul>
-      <li><strong>Default Password:</strong> {password}</li>
-    </ul>
+                            <ul>
+                              <li><strong>Default Password:</strong> {password}</li>
+                            </ul>
 
-    <p>Please make sure to change your password after logging in for the first time to ensure the security of your account.</p>
+                            <p>Please make sure to change your password after logging in for the first time to ensure the security of your account.</p>
 
-    <p>If you have any questions or need assistance, feel free to contact our support team at <a href=""""mailto:support@example.com"""">support@example.com</a>.</p>
+                            <p>If you have any questions or need assistance, feel free to contact our support team at <a href=""""mailto:support@example.com"""">support@example.com</a>.</p>
 
-    <footer>
-      Best regards,<br>
-      EasyLibro
-    </footer>
-  </div>
+                            <footer>
+                              Best regards,<br>
+                              EasyLibro
+                            </footer>
+                          </div>
 
-</body>
-</html>
+                        </body>
+                        </html>
 
                "
             };
+
+
+            return htmlBody;
+        }
+
+        public TextPart RemindEmail(Reservation reservation)
+        {
+            var htmlBody = new TextPart(TextFormat.Html)
+            {
+               Text = $@"
+                                <!DOCTYPE html>
+                                <html lang=""en"">
+                                <head>
+                                <meta charset=""UTF-8"">
+                                <title>Library Notification: Overdue Book</title>
+                                <style>
+                                    body {{
+                                        font-family: Arial, sans-serif;
+                                        margin: 0;
+                                        padding: 0;
+                                        background-color: #f4f4f4;
+                                        color: #333;
+                                    }}
+                                    .container {{
+                                        max-width: 600px;
+                                        margin: 20px auto;
+                                        padding: 20px;
+                                        background-color: #fff;
+                                        border-radius: 8px;
+                                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                    }}
+                                    h1 {{
+                                        color: #007bff;
+                                    }}
+                                    ul {{
+                                        list-style-type: none;
+                                        padding: 0;
+                                    }}
+                                    ul li {{
+                                        margin-bottom: 10px;
+                                    }}
+                                    p {{
+                                        line-height: 1.6;
+                                    }}
+                                    footer {{
+                                        margin-top: 20px;
+                                        text-align: center;
+                                        color: #888;
+                                    }}
+                                </style>
+                                </head>
+                                <body>
+
+                                <div class=""container"">
+                                    <h1>Library Notification: Overdue Book</h1>
+
+                                    <p>Hello,</p>
+
+                                    <p>This is a reminder that the book reserved with Reservation ID: <strong>{reservation.Id}</strong> is overdue.</p>
+
+                                    <ul>
+                                        <li><strong>Book ISBN:</strong> {reservation.ResourceId}</li>
+                                        <li><strong>Overdue Date:</strong> {reservation.DueDate}</li>
+                                    </ul>
+
+                                    <p>Please return the book as soon as possible to avoid any fines.</p>
+
+                                    <p>If you have any questions or need assistance, feel free to contact our support team at <a href=""mailto:support@example.com"">support@example.com</a>.</p>
+
+                                    <footer>
+                                        Best regards,<br>
+                                        Your Library
+                                    </footer>
+                                </div>
+
+                                </body>
+                                </html>"
+
+        };
+
+
             return htmlBody;
         }
     }

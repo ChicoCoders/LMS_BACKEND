@@ -24,7 +24,8 @@ namespace LMS.Controllers
 
         [HttpPost("AddUser")]
         public async Task<CreateUserResponseDto> AddUser(CreateUserRequestDto userdto){
-            return await _userService.AddUser(userdto);
+            var x = HttpContext;
+            return await _userService.AddUser(userdto,x);
         }
         [HttpPut("EditUser")]
         public async Task<bool> EditUser(EditUserRequestDto edituser)

@@ -21,7 +21,7 @@ namespace LMS.Controllers
         
         public string RecurringJobs()
         {
-            RecurringJob.AddOrUpdate(() =>  _reservationService.setOverdue(), Cron.Minutely());
+            RecurringJob.AddOrUpdate(() => _reservationService.setOverdue(), Cron.Minutely());
             return "yes";
         }
 
