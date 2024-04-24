@@ -1,6 +1,7 @@
 ﻿using LMS.DTOs;
 using LMS.Repository;
 using Microsoft.AspNetCore.Mvc;
+using Org.BouncyCastle.Asn1.Cmp;
 
 namespace LMS.Controllers
 {
@@ -21,12 +22,14 @@ namespace LMS.Controllers
             return await _requestService.AddRequest(request);
         }
 
+
         [HttpGet("DisplayRequest")]
         public async Task<List<GetRequestDto>> GetRequestList()
         {
-            return await _requestService.GetRequestList();
+            var x = HttpContext;
+            return await _requestService.GetRequestList(x);
         }
-        [HttpGet("RemoveRequest")]
+        [HttpDelete("RemoveRequest")]
         public async Task<bool> RemoveRequestList(int id)
         {
             return await _requestService.RemoveRequestList(id);

@@ -170,7 +170,7 @@ namespace LMS.Repository
 
         public async Task<List<UserListDto>> SearchUser(SearchUserDto searchUser)
         {
-            var k = new List<User>(); ;
+            var k = new List<User>(); 
             if (searchUser.keyword == "")
             {
                 k = _Context.Users.ToList();
@@ -201,6 +201,7 @@ namespace LMS.Repository
             {
                 k=_Context.Users.Where(e=>e.Address.Contains(searchUser.keyword)).ToList();
             }
+
             List<UserListDto> userlist = new List<UserListDto>();
             foreach (var x in k)
             {

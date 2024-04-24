@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using LMS.DTOs;
+using LMS.Repository;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LMS.Controllers
@@ -7,16 +9,31 @@ namespace LMS.Controllers
     [ApiController]
     public class DashboardController : ControllerBase
     {
-        public DashboardController()
-        {
 
+        private readonly IDashboardService _dashboardService;
+        public DashboardController(IDashboardService dashboardService)
+        {
+            _dashboardService = dashboardService;
         }
 
-       //[HttpGet]
-       // public async Task<> getDashboradData()
-        //{
 
-        //}
 
+       [HttpGet("getAdminDashboradData")]
+        public async Task<DashboardStatics> getAdminDashboradData()
+        {
+            return await _dashboardService.getAdminDashboradData();
+        }
+
+        [HttpGet("getOverDueList")]
+        public async Task<List<ReservationDto>> getOverdueList()
+        {
+            return await _dashboardService.getOverdueList();
+        }
+
+        [HttpGet("getLastWeekReservations")]
+        public async Task<List<LastWeekReservations>> getLastWeekReservations()
+        {
+            return await _dashboardService.getLastWeekReservations();
+        }
     }
 }

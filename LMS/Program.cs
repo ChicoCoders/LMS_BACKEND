@@ -27,6 +27,7 @@ builder.Services.AddScoped<INotificationService,NotificationService>();
 builder.Services.AddScoped<IRequestService, RequestService>();
 builder.Services.AddScoped<IReportService, ReportService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<IDashboardService,DashboardService>();
 builder.Services.AddScoped<JWTService>();
 
 

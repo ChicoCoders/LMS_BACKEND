@@ -1,4 +1,5 @@
 ﻿using LMS.DTOs;
+using LMS.Helpers;
 using LMS.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
@@ -11,12 +12,16 @@ namespace LMS.Repository
     public class RequestService:IRequestService
     {
         private readonly DataContext _Context;
+        private readonly JWTService _jwTService;
+        private readonly IReservationService _reservationService;
 
 
         //Contructor of the RequestService
-        public RequestService(DataContext Context)
+        public RequestService(DataContext Context,JWTService jwtService,IReservationService reservationService)
         {
             _Context = Context;
+            _jwTService = jwtService;
+            _reservationService = reservationService;
         }
         public async Task<bool> AddRequest(AddRequestDto request)
         {
@@ -57,15 +62,24 @@ namespace LMS.Repository
                 
 
                 _Context.Requests.Add(newrequest);//Add the Reservation
-                borrower.Status = "Loan";
                 await _Context.SaveChangesAsync();
 
                 return true;
             }
         }
-        public async Task<List<GetRequestDto>> GetRequestList()
+        public async Task<List<GetRequestDto>> GetRequestList(HttpContext httpContext)
         {
-            var allrequest =  _Context.Requests.ToList();
+            var username = _jwTService.GetUsername(httpContext);
+            var user = await _Context.Users.FirstOrDefaultAsync(e => e.UserName == username);
+            var allrequest = new List<RequestResource>();
+            if (user.UserType == "admin")
+            {
+                allrequest = _Context.Requests.ToList();
+            }
+            else
+            {
+               allrequest=_Context.Requests.Where(e=>e.UserId==username).ToList();
+            }
             List<GetRequestDto> requestlist = new List<GetRequestDto>();  
             if (allrequest != null)
             {
@@ -110,5 +124,6 @@ namespace LMS.Repository
             _Context.Requests.Remove(request);
             _Context.SaveChanges();
         }
+
     }
 }

@@ -92,7 +92,11 @@ namespace LMS.Repository
 
                 _Context.Reservations.Add(reservation);//Add the Reservation
                 borrower.Status = "Loan";
-                
+                if (request.requestId != 0)
+                {
+                    var req=await _Context.Requests.FirstOrDefaultAsync(e => e.Id == request.requestId);
+                    _Context.Requests.Remove(req);
+                }
                 await _Context.SaveChangesAsync();
 
                 var responsefromform = new IssueBookResponseDto //Intialize response dto
@@ -198,7 +202,7 @@ namespace LMS.Repository
             var userName = _jwtService.GetUsername(httpContext);
             var userType = (await _Context.Users.FirstOrDefaultAsync(u => u.UserName == userName)).UserType;
             
-            var k = new List<Reservation>(); ;
+            var k = new List<Reservation>(); 
             if (details.Keywords == "")
             {
                 if(userType=="admin")

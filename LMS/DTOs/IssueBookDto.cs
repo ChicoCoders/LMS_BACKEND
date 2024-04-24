@@ -18,6 +18,7 @@
         public string dueDate { get; set; }
         public bool Email { get; set;}
         
+        public int requestId { get; set; }
 
     }
     public class IssueBookResponseDto
