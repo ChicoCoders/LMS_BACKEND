@@ -46,7 +46,7 @@ namespace LMS.Controllers
             };
 
             var jwt = _jwtService.Generate(user.UserName,user.UserType);
-
+            Response.Cookies.Delete("jwt");
             Response.Cookies.Append("jwt", jwt, new CookieOptions
             {
                 HttpOnly = false
@@ -55,6 +55,43 @@ namespace LMS.Controllers
 
             return Ok(new{
                 message="success",
+            });
+        }
+
+
+        [HttpPost("selectusertype")]
+        public async Task<IActionResult> SelectUserType(string userType)
+        {
+            var userName = _jwtService.GetUsername(HttpContext);
+            var user=await _Context.Users.FirstOrDefaultAsync(e=>e.UserName == userName);
+
+            if (user == null)
+            {
+                return BadRequest("User not found");
+            }
+            if (userType=="admin")
+            {
+                var jwt = _jwtService.Generate(user.UserName, user.UserType);
+                Response.Cookies.Append("jwt", jwt, new CookieOptions
+                {
+                    HttpOnly = false
+                }
+               );
+            }
+            if(userType =="patron")
+            {
+                var jwt = _jwtService.Generate(user.UserName, "patron");
+                Response.Cookies.Append("jwt", jwt, new CookieOptions
+                {
+                    HttpOnly = false
+                }
+               );
+            }
+               
+
+            return Ok(new
+            {
+                message = "success",
             });
         }
 

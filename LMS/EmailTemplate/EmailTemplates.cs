@@ -168,7 +168,7 @@ namespace LMS.EmailTemplates
                           <div class=""container"">
                             <h1>Welcome to Our Site!</h1>
 
-                            <p>Hello Patron,</p>
+                            <p>Hello Easy Libro User,</p>
 
                             <p>Welcome to our website! We are excited to have you on board. As you are logging in for the first time, here are your password :</p>
 
@@ -196,6 +196,84 @@ namespace LMS.EmailTemplates
             return htmlBody;
         }
 
+        public TextPart ResetPassword(string link)
+        {
+            var htmlBody = new TextPart(TextFormat.Html)
+            {
+                Text = $@"
+                <!DOCTYPE html>
+                        <html lang=""en"">
+                        <head>
+                        <meta charset=""UTF-8"">
+                        <title>Welcome to Our Site!</title>
+                        <style>
+                          body {{
+                            font-family: Arial, sans-serif;
+                            margin: 0;
+                            padding: 0;
+                            background-color: #f4f4f4;
+                            color: #333;
+                          }}
+                          .container {{
+                            max-width: 600px;
+                            margin: 20px auto;
+                            padding: 20px;
+                            background-color: #fff;
+                            border-radius: 8px;
+                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                          }}
+                          h1 {{
+                            color: #007bff;
+                          }}
+                          ul {{
+                            list-style-type: none;
+                            padding: 0;
+                          }}
+                          ul li {{
+                            margin-bottom: 10px;
+                          }}
+                          p {{
+                            line-height: 1.6;
+                          }}
+                          footer {{
+                            margin-top: 20px;
+                            text-align: center;
+                            color: #888;
+                          }}
+                        </style>
+                        </head>
+                        <body>
+
+                          <div class=""container"">
+                            <h1>Reset Your Password</h1>
+
+                            <p>Hello Easy Libro User,</p>
+
+                            <p>Using below link you can reset you password...</p>
+
+                            <ul>
+                              <li>Reset your password by <a href='{link}'>clicking here</a>.</li>
+                            </ul>
+
+                            <p>Please make sure to change your password after logging in for the first time to ensure the security of your account.</p>
+
+                            <p>If you have any questions or need assistance, feel free to contact our support team at <a href=""""mailto:support@example.com"""">support@example.com</a>.</p>
+
+                            <footer>
+                              Best regards,<br>
+                              EasyLibro
+                            </footer>
+                          </div>
+
+                        </body>
+                        </html>
+
+               "
+            };
+
+
+            return htmlBody;
+        }
         public TextPart RemindEmail(Reservation reservation)
         {
             var htmlBody = new TextPart(TextFormat.Html)

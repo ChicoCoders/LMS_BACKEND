@@ -7,7 +7,7 @@ using System.ComponentModel.Design;
 
 namespace LMS.Controllers
 {
-   // [Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ReservationController : ControllerBase

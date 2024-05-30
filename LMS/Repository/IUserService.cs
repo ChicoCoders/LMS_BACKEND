@@ -21,5 +21,7 @@ namespace LMS.Repository
         Task<String> GetEmail(HttpContext httpContext);
 
         Task<bool> ChangeEmail(string newEmail, HttpContext httpContext);
+        Task<bool> SendForgotPasswordEmail(string email);
+        Task<bool> ResetPassword(ChangePasswordDto request, HttpContext httpContext);
     }
 }

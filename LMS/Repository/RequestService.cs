@@ -70,9 +70,10 @@ namespace LMS.Repository
         public async Task<List<GetRequestDto>> GetRequestList(HttpContext httpContext)
         {
             var username = _jwTService.GetUsername(httpContext);
+            var userType=_jwTService.GetUserType(httpContext);      
             var user = await _Context.Users.FirstOrDefaultAsync(e => e.UserName == username);
             var allrequest = new List<RequestResource>();
-            if (user.UserType == "admin")
+            if (userType == "admin")
             {
                 allrequest = _Context.Requests.ToList();
             }

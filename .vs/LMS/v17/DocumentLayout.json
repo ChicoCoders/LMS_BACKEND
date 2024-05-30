@@ -3,8 +3,84 @@
   "WorkspaceRootPath": "C:\\Repo\\LMS_BackEnd\\LMS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\repo\\lms_backend\\lms\\lms\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\repo\\lms_backend\\lms\\lms\\repository\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\repo\\lms_backend\\lms\\lms\\controllers\\autocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\controllers\\autocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\repo\\lms_backend\\lms\\lms\\helpers\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\helpers\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\repo\\lms_backend\\lms\\lms\\repository\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\repo\\lms_backend\\lms\\lms\\repository\\ireservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\ireservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\repo\\lms_backend\\lms\\lms\\dtos\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\dtos\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\repo\\lms_backend\\lms\\lms\\dtos\\aboutuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\dtos\\aboutuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\repo\\lms_backend\\lms\\lms\\repository\\requestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\requestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\repo\\lms_backend\\lms\\lms\\controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\repo\\lms_backend\\lms\\lms\\emailtemplate\\emailtemplates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\emailtemplate\\emailtemplates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\repo\\lms_backend\\lms\\lms\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\repo\\lms_backend\\lms\\lms\\repository\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\repo\\lms_backend\\lms\\lms\\repository\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\repo\\lms_backend\\lms\\lms\\repository\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\repo\\lms_backend\\lms\\lms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\repo\\lms_backend\\lms\\lms\\migrations\\20240408041427_add-migration m.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\migrations\\20240408041427_add-migration m.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\repo\\lms_backend\\lms\\lms\\lms.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\lms.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\repo\\lms_backend\\lms\\lms\\dtos\\requestbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\dtos\\requestbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\repo\\lms_backend\\lms\\lms\\hubs\\myhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\hubs\\myhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\repo\\lms_backend\\lms\\lms\\repository\\idashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,20 +95,8 @@
       "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\dtos\\dashboardstatics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\repo\\lms_backend\\lms\\lms\\repository\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\repo\\lms_backend\\lms\\lms\\repository\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\repo\\lms_backend\\lms\\lms\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\repo\\lms_backend\\lms\\lms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,11 +106,149 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthDto.cs",
+              "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\DTOs\\AuthDto.cs",
+              "RelativeDocumentMoniker": "LMS\\DTOs\\AuthDto.cs",
+              "ToolTip": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\DTOs\\AuthDto.cs",
+              "RelativeToolTip": "LMS\\DTOs\\AuthDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T19:24:33.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AboutUserDto.cs",
+              "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\DTOs\\AboutUserDto.cs",
+              "RelativeDocumentMoniker": "LMS\\DTOs\\AboutUserDto.cs",
+              "ToolTip": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\DTOs\\AboutUserDto.cs",
+              "RelativeToolTip": "LMS\\DTOs\\AboutUserDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T13:43:57.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IReservationService.cs",
+              "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Repository\\IReservationService.cs",
+              "RelativeDocumentMoniker": "LMS\\Repository\\IReservationService.cs",
+              "ToolTip": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Repository\\IReservationService.cs",
+              "RelativeToolTip": "LMS\\Repository\\IReservationService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAlwA0AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T18:44:19.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ReservationService.cs",
+              "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Repository\\ReservationService.cs",
+              "RelativeDocumentMoniker": "LMS\\Repository\\ReservationService.cs",
+              "ToolTip": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Repository\\ReservationService.cs",
+              "RelativeToolTip": "LMS\\Repository\\ReservationService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAANEAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T15:09:31.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "LMS\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "LMS\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAEYAAADg//////8vwEAAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T07:39:09.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "AutoController.cs",
+              "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Controllers\\AutoController.cs",
+              "RelativeDocumentMoniker": "LMS\\Controllers\\AutoController.cs",
+              "ToolTip": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Controllers\\AutoController.cs",
+              "RelativeToolTip": "LMS\\Controllers\\AutoController.cs",
+              "ViewState": "AQIAAA0AAADA//////8fwBcAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T15:56:53.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Repository\\UserService.cs",
+              "RelativeDocumentMoniker": "LMS\\Repository\\UserService.cs",
+              "ToolTip": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Repository\\UserService.cs",
+              "RelativeToolTip": "LMS\\Repository\\UserService.cs",
+              "ViewState": "AQIAAK8AAAAAMzMzMzMwwBIBAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T13:59:00.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "JWTService.cs",
+              "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Helpers\\JWTService.cs",
+              "RelativeDocumentMoniker": "LMS\\Helpers\\JWTService.cs",
+              "ToolTip": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Helpers\\JWTService.cs",
+              "RelativeToolTip": "LMS\\Helpers\\JWTService.cs",
+              "ViewState": "AQIAADEAAABgZmZmZmYhwDoAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T09:18:10.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ReservationController.cs",
+              "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Controllers\\ReservationController.cs",
+              "RelativeDocumentMoniker": "LMS\\Controllers\\ReservationController.cs",
+              "ToolTip": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Controllers\\ReservationController.cs",
+              "RelativeToolTip": "LMS\\Controllers\\ReservationController.cs",
+              "ViewState": "AQIAABAAAADQzMzMzMw3wAkAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T12:52:40.849Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RequestService.cs",
+              "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Repository\\RequestService.cs",
+              "RelativeDocumentMoniker": "LMS\\Repository\\RequestService.cs",
+              "ToolTip": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Repository\\RequestService.cs",
+              "RelativeToolTip": "LMS\\Repository\\RequestService.cs",
+              "ViewState": "AQIAAEUAAABAMzMzMzM2wEgAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T11:07:59.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Repository\\IUserService.cs",
+              "RelativeDocumentMoniker": "LMS\\Repository\\IUserService.cs",
+              "ToolTip": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Repository\\IUserService.cs",
+              "RelativeToolTip": "LMS\\Repository\\IUserService.cs",
+              "ViewState": "AQIAABEAAABAMzMzMzMtwBgAAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T07:34:42.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "LastWeekReservations.cs",
               "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\DTOs\\LastWeekReservations.cs",
               "RelativeDocumentMoniker": "LMS\\DTOs\\LastWeekReservations.cs",
@@ -58,43 +260,115 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ReservationService.cs",
-              "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Repository\\ReservationService.cs",
-              "RelativeDocumentMoniker": "LMS\\Repository\\ReservationService.cs",
-              "ToolTip": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Repository\\ReservationService.cs",
-              "RelativeToolTip": "LMS\\Repository\\ReservationService.cs",
-              "ViewState": "AQIAAEUAAACAZWZmZmYiwFYAAAAvAAAA",
+              "DocumentIndex": 14,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Repository\\EmailService.cs",
+              "RelativeDocumentMoniker": "LMS\\Repository\\EmailService.cs",
+              "ToolTip": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Repository\\EmailService.cs",
+              "RelativeToolTip": "LMS\\Repository\\EmailService.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAA1wAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T15:09:31.244Z"
+              "WhenOpened": "2024-05-26T07:26:39.077Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Repository\\UserService.cs",
-              "RelativeDocumentMoniker": "LMS\\Repository\\UserService.cs",
-              "ToolTip": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Repository\\UserService.cs",
-              "RelativeToolTip": "LMS\\Repository\\UserService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAfAAAA",
+              "DocumentIndex": 10,
+              "Title": "EmailTemplates.cs",
+              "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\EmailTemplate\\EmailTemplates.cs",
+              "RelativeDocumentMoniker": "LMS\\EmailTemplate\\EmailTemplates.cs",
+              "ToolTip": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\EmailTemplate\\EmailTemplates.cs",
+              "RelativeToolTip": "LMS\\EmailTemplate\\EmailTemplates.cs",
+              "ViewState": "AQIAAOYAAACg//////8kwPwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T13:59:00.7Z"
+              "WhenOpened": "2024-05-27T10:43:50.614Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
+              "Title": "DashboardService.cs",
+              "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Repository\\DashboardService.cs",
+              "RelativeDocumentMoniker": "LMS\\Repository\\DashboardService.cs",
+              "ToolTip": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Repository\\DashboardService.cs",
+              "RelativeToolTip": "LMS\\Repository\\DashboardService.cs",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAqwE8AAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T10:18:31.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "LMS\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Controllers\\UserController.cs",
+              "RelativeToolTip": "LMS\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAE0AAAAA+P//////v1gAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T13:08:30.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MyHub.cs",
+              "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Hubs\\MyHub.cs",
+              "RelativeDocumentMoniker": "LMS\\Hubs\\MyHub.cs",
+              "ToolTip": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Hubs\\MyHub.cs",
+              "RelativeToolTip": "LMS\\Hubs\\MyHub.cs",
+              "ViewState": "AQIAAAsAAACA//////8PwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T10:31:43.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Program.cs",
               "RelativeDocumentMoniker": "LMS\\Program.cs",
               "ToolTip": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Program.cs",
               "RelativeToolTip": "LMS\\Program.cs",
-              "ViewState": "AQIAAFIAAAAAMzMzMzMrwB0AAAAAAAAA",
+              "ViewState": "AQIAAEsAAAA4MzMzMzMrwGAAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-23T10:37:59.334Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 16,
+              "Title": "20240408041427_add-migration m.cs",
+              "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Migrations\\20240408041427_add-migration m.cs",
+              "RelativeDocumentMoniker": "LMS\\Migrations\\20240408041427_add-migration m.cs",
+              "ToolTip": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Migrations\\20240408041427_add-migration m.cs",
+              "RelativeToolTip": "LMS\\Migrations\\20240408041427_add-migration m.cs",
+              "ViewState": "AQIAAA4AAAAAzMzMzMwmwMkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T15:58:10.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "LMS.csproj",
+              "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\LMS.csproj",
+              "RelativeDocumentMoniker": "LMS\\LMS.csproj",
+              "ToolTip": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\LMS.csproj",
+              "RelativeToolTip": "LMS\\LMS.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-03T22:53:06.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "RequestBookDto.cs",
+              "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\DTOs\\RequestBookDto.cs",
+              "RelativeDocumentMoniker": "LMS\\DTOs\\RequestBookDto.cs",
+              "ToolTip": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\DTOs\\RequestBookDto.cs",
+              "RelativeToolTip": "LMS\\DTOs\\RequestBookDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T04:08:31.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "IDashboardService.cs",
               "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Repository\\IDashboardService.cs",
               "RelativeDocumentMoniker": "LMS\\Repository\\IDashboardService.cs",
@@ -106,38 +380,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 22,
               "Title": "DashboardStatics.cs",
               "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\DTOs\\DashboardStatics.cs",
               "RelativeDocumentMoniker": "LMS\\DTOs\\DashboardStatics.cs",
               "ToolTip": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\DTOs\\DashboardStatics.cs",
               "RelativeToolTip": "LMS\\DTOs\\DashboardStatics.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAAAAIAAAAhAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAxwAIAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-23T10:24:22.711Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DashboardService.cs",
-              "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Repository\\DashboardService.cs",
-              "RelativeDocumentMoniker": "LMS\\Repository\\DashboardService.cs",
-              "ToolTip": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Repository\\DashboardService.cs",
-              "RelativeToolTip": "LMS\\Repository\\DashboardService.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAAAE8AAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T10:18:31.137Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 23,
               "Title": "DashboardController.cs",
               "DocumentMoniker": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Controllers\\DashboardController.cs",
               "RelativeDocumentMoniker": "LMS\\Controllers\\DashboardController.cs",
               "ToolTip": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\Controllers\\DashboardController.cs",
               "RelativeToolTip": "LMS\\Controllers\\DashboardController.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAA5wCEAAAAIAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwCEAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-23T10:17:31.838Z"
             }

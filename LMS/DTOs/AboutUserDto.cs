@@ -7,7 +7,7 @@
         public string LName { get; set; }
         public string UserType {  get; set; }
         public string Email { get; set; }
-        public string Type {  get; set; }
+        public string ActualType {  get; set; }
         public string Phone { get; set; }
         public DateOnly DOB {  get; set; }
         public string Address { get; set; }

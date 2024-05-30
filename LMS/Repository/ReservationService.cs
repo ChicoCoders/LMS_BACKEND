@@ -200,7 +200,7 @@ namespace LMS.Repository
         public async Task<List<ReservationDto>> SearchReservation(SearchDetails details,HttpContext httpContext)
         {
             var userName = _jwtService.GetUsername(httpContext);
-            var userType = (await _Context.Users.FirstOrDefaultAsync(u => u.UserName == userName)).UserType;
+            var userType = _jwtService.GetUserType(httpContext);
             
             var k = new List<Reservation>(); 
             if (details.Keywords == "")
