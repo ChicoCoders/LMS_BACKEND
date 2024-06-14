@@ -14,6 +14,7 @@
         public string Status { get; set; }
         public string nic { get; set; }
         
+        public int reservationcount { get; set; }
 
     }
 }

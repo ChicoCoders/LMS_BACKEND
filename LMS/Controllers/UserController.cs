@@ -42,10 +42,10 @@ namespace LMS.Controllers
         }
 
 
-        [HttpGet("AboutUser")]
-        public async Task<AboutUserDto> AboutUser(string username)
+        [HttpPost("AboutUser")]
+        public async Task<AboutUserDto> AboutUser(user user)
         {
-            return await _userService.AboutUser(username);
+            return await _userService.AboutUser(user.username);
         }
 
         [HttpPost("SearchUser")]
@@ -62,14 +62,14 @@ namespace LMS.Controllers
             return await _userService.ChangePassword(request, x);
         }
 
-        [HttpGet("GetMyData")]
+        [HttpPost("GetMyData")]
         public async Task<AboutUserDto> GetMyData()
         {
             var x = HttpContext;
             return await _userService.GetMyData(x);
         }
 
-        [HttpGet("GetEmail")]
+        [HttpPost("GetEmail")]
         public async Task<String> GetEmail()
         {
             var x = HttpContext;
@@ -98,6 +98,11 @@ namespace LMS.Controllers
 
 
             return await _userService.SendForgotPasswordEmail(email);
+        }
+
+       public class user
+        {
+            public string username { get; set; }
         }
     }
     }

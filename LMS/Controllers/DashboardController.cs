@@ -18,19 +18,19 @@ namespace LMS.Controllers
 
 
 
-       [HttpGet("getAdminDashboradData")]
+       [HttpPost("getAdminDashboradData")]
         public async Task<DashboardStatics> getAdminDashboradData()
         {
             return await _dashboardService.getAdminDashboradData();
         }
 
-        [HttpGet("getOverDueList")]
+        [HttpPost("getOverDueList")]
         public async Task<List<ReservationDto>> getOverdueList()
         {
             return await _dashboardService.getOverdueList();
         }
 
-        [HttpGet("getLastWeekReservations")]
+        [HttpPost("getLastWeekReservations")]
         public async Task<List<LastWeekReservations>> getLastWeekReservations()
         {
             return await _dashboardService.getLastWeekReservations();

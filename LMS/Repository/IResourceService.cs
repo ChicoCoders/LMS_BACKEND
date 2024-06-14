@@ -4,10 +4,9 @@ namespace LMS.Repository
 {
     public interface IResourceService
     {
-        Task<AddBookResponseDto> AddResource(AddBookRequestDto book);
+        Task<AddBookResponseDto> AddResource(AddBookRequestDto book,HttpContext httpContext);
         Task<bool> DeleteResource(string isbn);
-        Task<List<ResourceListDto>> SearchResource(string Title);
-        Task<List<ResourceListDto>> GetAllResource();
+        Task<List<ResourceListDto>> SearchResources(SearchbookDto searchbookDto);
         Task<bool> EditResource(AddBookRequestDto book);
         Task<AboutResourceDto> AboutResource(string isbn);
     }

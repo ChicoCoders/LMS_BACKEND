@@ -131,6 +131,7 @@ namespace LMS.Repository
             }
             else
             {
+                var count = await _Context.Reservations.CountAsync(e => e.BorrowerID == user.UserName);
                 var aboutuser = new AboutUserDto
                 {
                     UserName = user.UserName,
@@ -143,6 +144,8 @@ namespace LMS.Repository
                     DOB = user.DOB,
                     Address = user.Address,
                     Status = user.Status,
+                    nic=user.NIC,
+                    reservationcount = count
                 };
 
                 return aboutuser;
@@ -184,28 +187,28 @@ namespace LMS.Repository
             if (searchUser.type == "all")
             {
                 k = _Context.Users.Where(e =>
-                   e.UserName.Contains(searchUser.keyword) ||
-                   e.FName.Contains(searchUser.keyword) ||
-                   e.LName.Contains(searchUser.keyword) ||
-                   e.Email.Contains(searchUser.keyword) ||
-                   e.Address.Contains(searchUser.keyword)
+                   e.UserName.ToLower().Contains(searchUser.keyword.ToLower()) ||
+                   e.FName.ToLower().Contains(searchUser.keyword.ToLower()) ||
+                   e.LName.ToLower().Contains(searchUser.keyword.ToLower()) ||
+                   e.Email.ToLower().Contains(searchUser.keyword.ToLower()) ||
+                   e.Address.ToLower().Contains(searchUser.keyword.ToLower())
                ).ToList();
             }
             else if (searchUser.type == "username")
             {
-                k = _Context.Users.Where(e => e.UserName.Contains(searchUser.keyword)).ToList();
+                k = _Context.Users.Where(e => e.UserName.ToLower().Contains(searchUser.keyword.ToLower())).ToList();
             }
             else if (searchUser.type == "name")
             {
-                k = _Context.Users.Where(e => e.FName.Contains(searchUser.keyword) || e.LName.Contains(searchUser.keyword)).ToList();
+                k = _Context.Users.Where(e => e.FName.ToLower().Contains(searchUser.keyword.ToLower()) || e.LName.ToLower().Contains(searchUser.keyword.ToLower())).ToList();
             }
             else if (searchUser.type == "email")
             {
-                k = _Context.Users.Where(e => e.Email.Contains(searchUser.keyword)).ToList();
+                k = _Context.Users.Where(e => e.Email.ToLower().Contains(searchUser.keyword.ToLower())).ToList();
             }
             else if (searchUser.type == "address")
             {
-                k = _Context.Users.Where(e => e.Address.Contains(searchUser.keyword)).ToList();
+                k = _Context.Users.Where(e => e.Address.ToLower().Contains(searchUser.keyword.ToLower())).ToList();
             }
 
             List<UserListDto> userlist = new List<UserListDto>();

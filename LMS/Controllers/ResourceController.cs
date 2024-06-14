@@ -19,7 +19,8 @@ namespace LMS.Controllers
         [HttpPost("AddResource")]
         public async Task<AddBookResponseDto> AddResource(AddBookRequestDto book)
         {
-            return await _resourceService.AddResource(book);
+            var x = HttpContext;
+            return await _resourceService.AddResource(book,x);
         }
 
         [HttpPut("EditResource")]
@@ -34,22 +35,17 @@ namespace LMS.Controllers
             return await _resourceService.DeleteResource(isbn);
         }
 
-        [HttpGet("AbouteResource")]
+        [HttpPost("AbouteResource")]
         public async Task<AboutResourceDto> AboutResource(string isbn)
         {
             return await _resourceService.AboutResource(isbn);
         }
 
-        [HttpPost("SearchResource")]
-        public async Task<List< ResourceListDto>> SearchResource(string Title)
-        {
-            return await _resourceService.SearchResource(Title);
-        }
 
-        [HttpGet("GetAllResource")]
-        public async Task<List<ResourceListDto>> GetAllResource()
+        [HttpPost("SearchResources")]
+        public async Task<List<ResourceListDto>> SearchResources(SearchbookDto searchbookDto)
         {
-            return await _resourceService.GetAllResource();
+            return await _resourceService.SearchResources(searchbookDto);
         }
 
 

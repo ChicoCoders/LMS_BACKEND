@@ -7,9 +7,9 @@ namespace LMS.DTOs
         public int reservationNo { get; set; }
         public string Resource { get; set; }
         public string UserName { get; set; }
-
+        public string UserId { get; set; }
         public string BorrowerName { get; set; }
-
+        public DateOnly IssueDate { get; set; }
         public DateOnly DueDate { get; set; }
         public string Status { get; set; }
     }
@@ -18,8 +18,6 @@ namespace LMS.DTOs
     {
         public string Keywords { get; set; }
 
-        public bool ResourceId { get; set; }
-        public bool UserId { get; set; }
-        public bool ReservationId { get; set; }
+        public string type { get; set; }
     }
 }

@@ -2,9 +2,11 @@
 using LMS.EmailTemplates;
 using LMS.Helpers;
 using LMS.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Microsoft.VisualBasic;
+using Org.BouncyCastle.Tls;
 using System.Linq;
 using System.Runtime.InteropServices;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -29,14 +31,14 @@ namespace LMS.Repository
         }
 
 
-        public async Task<IssueBookFormResponseDto> LoadIssueForm(string isbn)
+        public async Task<IActionResult> LoadIssueForm(string isbn)
         {
 
             var resource = await _Context.Resources.FirstOrDefaultAsync(u => u.ISBN == isbn);
 
             if (resource == null)  //Check is there any resource
             {
-                throw new Exception("ResourceNotFound");
+                return new BadRequestObjectResult("ResourceNotFound");
             }
             else //If Resource found pass data to port
             {
@@ -45,38 +47,41 @@ namespace LMS.Repository
                     ISBN=resource.ISBN,
                     URL = resource.ImageURL,
                 };
-                return resourcedto;
+                return new OkObjectResult(resourcedto); 
             }
         }
-        public async Task<IssueBookResponseDto> IssueBook(IssueBookRequestDto request,HttpContext httpContext)
+        public async Task<IActionResult> IssueBook(IssueBookRequestDto request,HttpContext httpContext)
         {
 
             var resource = await _Context.Resources.FirstOrDefaultAsync(u => u.ISBN == request.ISBN);
             var borrower = await _Context.Users.FirstOrDefaultAsync(u => u.UserName == request.BorrowerID);
-            
+            if (borrower == null) //If User not found
+            {
+                return new BadRequestObjectResult("Wrong Borrower Name");
+            }
             //Decrease Quantity of resource by 1
             resource.Quantity = resource.Quantity - 1;
             resource.Borrowed=resource.Borrowed + 1;
             await _Context.SaveChangesAsync();
 
-
+            
             if (resource.Quantity < 0) //If not enough resources
             {
                 resource.Quantity = resource.Quantity + 1;
                 resource.Borrowed = resource.Borrowed - 1;
                 await _Context.SaveChangesAsync();
-                throw new Exception("No of Books not enough");
+                return new BadRequestObjectResult("No of Books not enough");
             }
             else if (borrower.Status == "Loan") //If User in a loan
             {
                 resource.Quantity = resource.Quantity + 1;
                 resource.Borrowed = resource.Borrowed - 1;
                 await _Context.SaveChangesAsync();
-                throw new Exception("User in a loan");
+                return new BadRequestObjectResult("User in a loan");
             }
             else  //If User Can borrow the book
             {
-                var issuer= _jwtService.GetUsername(httpContext);
+                var issuer=_jwtService.GetUsername(httpContext);
                 var reservation = new Reservation
                 {
                     ReservationNo="123456",
@@ -105,7 +110,16 @@ namespace LMS.Repository
                     ISBN = resource.ISBN,
                     ReservationId = reservation.Id,
                 };
-                await _notificationService.IssueNotification(reservation.Id);
+
+                try
+                {
+                    await _notificationService.IssueNotification(reservation.Id);
+                }
+                catch
+                {
+                    return new OkObjectResult("Issue Book Succeessfully..Notification not sent");
+                }
+
                 if(request.Email == true) //If Email is true
                 {
                     try
@@ -115,13 +129,14 @@ namespace LMS.Repository
                     }
                     catch
                     {
+                        return new OkObjectResult("Issue Book Succeessfully..Email not sent");
                     }
                     }
-                return responsefromform; // return response dto to port
+                return new OkObjectResult("Issue Book Succeessfully"); // return response dto to port
             }
 
         }
-        public async Task<AboutReservationDto> AboutReservation(int resId)
+        public async Task<IActionResult> AboutReservation(int resId)
         {
 
             var reservation = await _Context.Reservations.FirstOrDefaultAsync(u => u.Id == resId);
@@ -129,35 +144,36 @@ namespace LMS.Repository
 
             if (reservation == null)  //Check is there any resource
             {
-                throw new Exception("ReservationNotFound");
+                return new BadRequestObjectResult("ReservationNotFound");
             }
             else //If Resource found past data to port
             {
                 var resource = await _Context.Resources.FirstOrDefaultAsync(u => u.ISBN == reservation.ResourceId);
                 var reservationdto = new AboutReservationDto
                 {
-                      ResId=reservation.Id,
-                      ISBN =reservation.ResourceId,
-                      BookTitle=resource.Title,
-                      UserName=reservation.BorrowerID,
-                      DateIssue=reservation.IssuedDate, 
-                      DueDate=reservation.DueDate, 
-                      Issuer=reservation.IssuedByID, 
-                      ReturnDate=reservation.ReturnDate, 
-                      Status=reservation.Status 
+                    ResId = reservation.Id,
+                    ISBN = reservation.ResourceId,
+                    BookTitle = resource.Title,
+                    UserName = reservation.BorrowerID,
+                    DateIssue = reservation.IssuedDate,
+                    DueDate = reservation.DueDate,
+                    Issuer = reservation.IssuedByID,
+                    ReturnDate = reservation.ReturnDate,
+                    Status = reservation.Status,
+                    ImagePath = resource.ImageURL
 
     };
-                return reservationdto;
+                return new OkObjectResult(reservationdto);
             }
 
         }
-        public async Task<bool> ReturnBook(ReturnBookDto request, HttpContext httpContext)
+        public async Task<IActionResult> ReturnBook(ReturnBookDto request, HttpContext httpContext)
         {
             var reservation= await _Context.Reservations.FirstOrDefaultAsync(u => u.Id == request.reservationNo);
 
             if (reservation == null)
             {
-                throw new Exception("Reservation not found");
+                return new BadRequestObjectResult("Reservation not found");
             }
             else
             {
@@ -172,8 +188,18 @@ namespace LMS.Repository
                     reservation.ReturnDate = DateOnly.Parse(request.returnDate);
                    
                     await _Context.SaveChangesAsync();
-                    await  _notificationService.IssueNotification(reservation.Id);
+                   
 
+                    try
+                    {
+                        await _notificationService.ReturnNotification(reservation.Id);
+                       
+                    }
+                    catch
+                    {
+                        return new OkObjectResult("Return Book Succeessfully..Notification not sent");
+                    }
+                    
                     if (request.email == true) { 
                         try
                         {
@@ -184,68 +210,79 @@ namespace LMS.Repository
                         }
                         catch
                         {
-                            
+                            return new OkObjectResult("Email not sent");
                         }
                     }
 
-                    return true;
+                    return new OkObjectResult("Return Book Succeessfully");
                 }
                 else
                 {
-                    throw new Exception("Already Returned");
+                    return new OkObjectResult("Already Returned");
                 }
             }
         }
 
-        public async Task<List<ReservationDto>> SearchReservation(SearchDetails details,HttpContext httpContext)
+        public async Task<IActionResult> SearchReservation(SearchDetails details,HttpContext httpContext)
         {
             var userName = _jwtService.GetUsername(httpContext);
             var userType = _jwtService.GetUserType(httpContext);
-            
-            var k = new List<Reservation>(); 
+
+
+            var k = new List<Reservation>();
+
+            if (userType == "admin")
+                k = _Context.Reservations.ToList();
+            if (userType == "patron")
+                k = _Context.Reservations.Where(e => e.BorrowerID == userName).ToList();
+
             if (details.Keywords == "")
             {
-                if(userType=="admin")
-                     k = _Context.Reservations.ToList();
-                if(userType=="patron")
-                     k = _Context.Reservations.Where(e => e.BorrowerID == userName).ToList();
+
             }
-            if(details.UserId == true && details.ResourceId == true && details.ReservationId == true){
+            else if (details.type=="all")
+            {
 
                 int number;
                 bool success = int.TryParse(details.Keywords, out number);
                 if (success)
+                {
 
-                    k = _Context.Reservations.Where(e =>
-                    (userType == "patron" ? e.BorrowerID == userName : true)&&
-                    (e.BorrowerID.Contains(details.Keywords) 
-                    || e.ResourceId.Contains(details.Keywords) 
-                    || e.Id.Equals(number))).ToList();
-
+                    k = k.Where(e =>
+                    e.BorrowerID.ToLower().Contains(details.Keywords.ToLower())
+                    || e.ResourceId.ToLower().Contains(details.Keywords.ToLower())
+                    || e.Id.Equals(number)).ToList();
+                }
                 else
-                    k = _Context.Reservations.Where(e =>
-                    (userType == "patron" ? e.BorrowerID == userName : true) &&
-                    (e.BorrowerID.Contains(details.Keywords)
-                    || e.ResourceId.Contains(details.Keywords))).ToList();
+                {
+                    k = k.Where(e =>
+                    e.BorrowerID.ToLower().Contains(details.Keywords.ToLower())
+                    || e.ResourceId.ToLower().Contains(details.Keywords.ToLower())).ToList();
+                }
             }
-            else if (details.UserId == true)
+            else if (details.type=="userId")
             {
-                 k= _Context.Reservations.Where(e => (userType == "patron" ? e.BorrowerID == userName : true) && e.BorrowerID.Contains(details.Keywords)).ToList();
+                k = k.Where(e => e.BorrowerID.ToLower().Contains(details.Keywords.ToLower())).ToList();
             }
-            else if (details.ResourceId == true)
+            else if (details.type== "resourceId")
             {
-                k = _Context.Reservations.Where(e => (userType == "patron" ? e.BorrowerID == userName : true) && e.ResourceId.Contains(details.Keywords)).ToList();
+                k = k.Where(e => e.ResourceId.ToLower().Contains(details.Keywords.ToLower())).ToList();
             }
-            else if (details.ReservationId == true)
+            else if (details.type== "reservationId")
             {
                 int number;
                 bool success = int.TryParse(details.Keywords, out number);
 
                 if (success)
                 {
-                    k = _Context.Reservations.Where(e => (userType == "patron" ? e.BorrowerID == userName : true) && e.Id.Equals(number)).ToList();
-                } 
+                    k = _Context.Reservations.Where(e => e.Id.Equals(number)).ToList();
+                }
             }
+            else {      
+                return new OkObjectResult("Invalid Search");
+            }
+
+
 
             List<ReservationDto> reservationlist = new List<ReservationDto>();
             foreach(var x in k) {
@@ -255,22 +292,24 @@ namespace LMS.Repository
                     reservationNo = x.Id,
                     Resource=x.ResourceId,
                     BorrowerName=x.BorrowerID,
+                    UserId=x.BorrowerID,
                     UserName=userob.FName+" "+ userob.LName,
                     DueDate=x.DueDate,
+                    IssueDate=x.IssuedDate,
                     Status=x.Status//need to look due or not
                 };
                 reservationlist.Add(res);
             }
-            return reservationlist;
+            return new OkObjectResult(reservationlist);
 
 
         }
 
-        public async Task<bool> deleteReservation(int id)
+        public async Task<IActionResult> deleteReservation(int id)
         {
             var reservation = await _Context.Reservations.FirstOrDefaultAsync(e => e.Id == id);
             if (reservation == null)
-                return false;
+                return new OkObjectResult(false);
             else
             {
                 if (reservation.Status != "reserved")
@@ -284,23 +323,23 @@ namespace LMS.Repository
                 }
                 _Context.Remove(reservation);
                 await _Context.SaveChangesAsync();
-                return true;
+                return new OkObjectResult(true);
             }
                 
         }
 
-        public async Task<bool> extendDue(int id, string due)
+        public async Task<IActionResult> extendDue(int id, string due)
         {
             var reservation = await _Context.Reservations.FirstOrDefaultAsync(e => e.Id == id);
             if(reservation == null)
             {
-               return false;
+               return new OkObjectResult( false);
             }
             else
             {
                 reservation.DueDate = DateOnly.Parse(due);
                 await _Context.SaveChangesAsync();
-                return true;
+                return new OkObjectResult(true);
             }
 
         }

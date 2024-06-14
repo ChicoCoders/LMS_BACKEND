@@ -19,11 +19,12 @@ namespace LMS.Controllers
         [HttpPost("RequestResource")]
         public async Task<bool> AddRequest(AddRequestDto request)
         {
-            return await _requestService.AddRequest(request);
+            var x = HttpContext;
+            return await _requestService.AddRequest(request,x);
         }
 
 
-        [HttpGet("DisplayRequest")]
+        [HttpPost("DisplayRequest")]
         public async Task<List<GetRequestDto>> GetRequestList()
         {
             var x = HttpContext;

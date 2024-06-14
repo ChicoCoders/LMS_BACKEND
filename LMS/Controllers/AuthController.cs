@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Org.BouncyCastle.Crypto;
+using Org.BouncyCastle.Pqc.Crypto.Lms;
+using System.Runtime.Intrinsics.Arm;
 
 namespace LMS.Controllers
 {
@@ -35,6 +37,8 @@ namespace LMS.Controllers
                 return BadRequest("User not found");
             }
            if (!(BCrypt.Net.BCrypt.Verify( request.password, user.Password)))
+          //if(request.password==user.Password)
+                if(request.password != user.Password)
             {
                 return BadRequest("Wrong Password");
 
@@ -44,12 +48,12 @@ namespace LMS.Controllers
                 userName = user.UserName,
                 password = user.Password,
             };
-
             var jwt = _jwtService.Generate(user.UserName,user.UserType);
             Response.Cookies.Delete("jwt");
             Response.Cookies.Append("jwt", jwt, new CookieOptions
             {
-                HttpOnly = false
+                HttpOnly = false,
+                Expires = DateTime.Now.AddHours(3),
             }
             );
 
@@ -74,7 +78,8 @@ namespace LMS.Controllers
                 var jwt = _jwtService.Generate(user.UserName, user.UserType);
                 Response.Cookies.Append("jwt", jwt, new CookieOptions
                 {
-                    HttpOnly = false
+                    HttpOnly = false,
+                    Expires = DateTime.Now.AddHours(3),
                 }
                );
             }
@@ -83,7 +88,10 @@ namespace LMS.Controllers
                 var jwt = _jwtService.Generate(user.UserName, "patron");
                 Response.Cookies.Append("jwt", jwt, new CookieOptions
                 {
-                    HttpOnly = false
+
+                    HttpOnly = false,
+                    Expires = DateTime.Now.AddHours(3),
+
                 }
                );
             }

@@ -1,4 +1,5 @@
 ﻿using LMS.DTOs;
+using LMS.Helpers;
 using LMS.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics.Metrics;
@@ -10,15 +11,18 @@ namespace LMS.Repository
     {
 
         private readonly DataContext _Context;
+        private readonly JWTService _jWTService;
 
         //Contructor of the ResourceService
-        public ResourceService(DataContext Context)
+        public ResourceService(DataContext Context,JWTService jWTService)
         {
             _Context = Context;
+            _jWTService = jWTService;
         }
 
-        public async Task<AddBookResponseDto> AddResource(AddBookRequestDto book)
+        public async Task<AddBookResponseDto> AddResource(AddBookRequestDto book,HttpContext httpContext)
         {
+            var addedby = _jWTService.GetUsername(httpContext);
             var resource = await _Context.Resources.FirstOrDefaultAsync(u => u.ISBN == book.ISBN); 
 
             if (resource == null)// Check resource already in DB
@@ -42,14 +46,14 @@ namespace LMS.Repository
                     Type = book.Type,
                     Quantity = book.Quantity,
                     Borrowed = 0,
-                   // year=book.Year,
+                   //year=book.Year,
                     Description = book.Description,
                     Price = book.Price,
                     PageCount = book.Pages,
-                    AddedOn = book.AddededOn,
+                    AddedOn = DateTime.UtcNow,
                     ImageURL = book.ImagePath,
-                    AddedByID = "kavidil",
-                    BookLocation =  book.CupboardId.ToString()+"-"+book.ShelfNo.ToString(),
+                    AddedByID = addedby,
+                    BookLocation =  book.CupboardId+"-"+book.ShelfNo,
                 };
                 _Context.Resources.Add(reso); //Add the Resource
                 await _Context.SaveChangesAsync();
@@ -84,41 +88,58 @@ namespace LMS.Repository
             }
         }
 
-        public async Task<List<ResourceListDto>> SearchResource(string Title)
+        public async Task<List<ResourceListDto>> SearchResources(SearchbookDto searchbookDto)
         {
-            var records = _Context.Resources.Where(e => e.Title.Contains(Title)).ToList();
-            List<ResourceListDto> reso=new List<ResourceListDto>();
-            foreach(var x in records)
-            {
-                var y = new ResourceListDto
-                {
-                    isbn = x.ISBN,
-                    title = x.Title,
-                    noOfBooks = x.Quantity,
-                    url=x.ImageURL,
-                    type=x.Type,
-                    author=x.AuthorName
-                };
-                
-                reso.Add(y);
-            }
-            return (reso);
-        }
-
-        public async Task<List<ResourceListDto>> GetAllResource()
-        {
-            var records = _Context.Resources.ToList();
+            var records = new List<Resource>();
             List<ResourceListDto> reso = new List<ResourceListDto>();
+
+
+            if (searchbookDto.keyword == "")
+            {
+                records = _Context.Resources.ToList();
+            }
+            if (searchbookDto.tag == "all")
+            {
+                records = _Context.Resources.Where(e =>
+                    e.Title.ToLower().Contains(searchbookDto.keyword.ToLower())||
+                   e.ISBN.ToLower().Contains(searchbookDto.keyword.ToLower()) ||
+                   e.AuthorName.ToLower().Contains(searchbookDto.keyword.ToLower()) 
+                   ).ToList();
+            }
+            else if (searchbookDto.tag == "title")
+            {
+                records = _Context.Resources.Where(e => e.Title.ToLower().Contains(searchbookDto.keyword.ToLower())).ToList();
+            }
+            else if (searchbookDto.tag == "isbn")
+            {
+                records = _Context.Resources.Where(e => e.ISBN.ToLower().Contains(searchbookDto.keyword.ToLower())).ToList();
+            }
+            else if (searchbookDto.tag == "author")
+            {
+                records = _Context.Resources.Where(e => e.AuthorName.ToLower().Contains(searchbookDto.keyword.ToLower())).ToList();
+            }
+
+            if (searchbookDto.type != "all")
+            {
+                records = records.Where(e => e.Type.ToLower() == searchbookDto.type.ToLower()).ToList();
+            }
+
+
             foreach (var x in records)
             {
+                int count= _Context.Reservations.Where(e => e.ResourceId == x.ISBN).Count();
                 var y = new ResourceListDto
                 {
                     isbn = x.ISBN,
                     title = x.Title,
-                    noOfBooks = x.Quantity,
+                    noOfBooks = x.Quantity+x.Borrowed,
                     url = x.ImageURL,
                     type = x.Type,
-                    author = x.AuthorName
+                    remain=x.Quantity,
+                    dateadded=x.AddedOn,
+                    noOfRes=count,
+                    author = x.AuthorName,
+                    location = x.BookLocation
                 };
 
                 reso.Add(y);
@@ -147,6 +168,11 @@ namespace LMS.Repository
                     resource.ImageURL = book.ImagePath;
                
                     resource.Type = book.Type;
+
+                    resource.ImageURL = book.ImagePath;
+
+                    resource.Description = book.Description;
+
                
                     var author = await _Context.Author.FirstOrDefaultAsync(u => u.AuthorName == book.Author);
                     if (author == null)
@@ -177,19 +203,24 @@ namespace LMS.Repository
             else
             {
                 var location= await _Context.Locations.FirstOrDefaultAsync(u => u.LocationNo == resource.BookLocation);
+                var cupboard = await _Context.Cupboard.FirstOrDefaultAsync(u => u.cupboardID == location.CupboardId);
                 var res = new AboutResourceDto
                 {
                         ISBN=resource.ISBN,
+                        Type=resource.Type,
+                        Title=resource.Title,
                         Author=resource.AuthorName,
                         Remain=resource.Quantity,
                         borrowed=resource.Borrowed,
                         total=resource.Quantity+resource.Borrowed,
-                        CupboardId=location.CupboardId,
-                        ShelfId=location.ShelfNo,
+                        CupboardId=cupboard.cupboardID.ToString(), 
+                        CupboardName=cupboard.name,
+                        ShelfId=location.ShelfNo.ToString(),
                         Description=resource.Description,
                         pages=resource.PageCount,
                         price=resource.Price,
-                        addedon=resource.AddedOn
+                        addedon=resource.AddedOn,
+                        Imagepath=resource.ImageURL
                 };
                 return res;
             }

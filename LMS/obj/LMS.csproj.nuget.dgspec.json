@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\LMS.csproj": {}
+    "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\LMS.csproj": {}
   },
   "projects": {
-    "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\LMS.csproj": {
+    "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\LMS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\LMS.csproj",
+        "projectUniqueName": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\LMS.csproj",
         "projectName": "LMS",
-        "projectPath": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\LMS.csproj",
+        "projectPath": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\LMS.csproj",
         "packagesPath": "C:\\Users\\Arambage K D\\.nuget\\packages\\",
-        "outputPath": "C:\\Repo\\LMS_BackEnd\\LMS\\LMS\\obj\\",
+        "outputPath": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Arambage K D\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -48,6 +48,10 @@
             "BCrypt.Net-Next": {
               "target": "Package",
               "version": "[4.0.3, )"
+            },
+            "FirebaseAdmin": {
+              "target": "Package",
+              "version": "[3.0.0, )"
             },
             "Hangfire": {
               "target": "Package",
@@ -104,6 +108,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "Ngrok.AspNetCore": {
+              "target": "Package",
+              "version": "[1.0.6, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

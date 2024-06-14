@@ -34,12 +34,13 @@ namespace LMS.Models
         [Required]
         public User AddedBy { get; set; }
 
-        
         public List<Reservation> Reservations { get; set; }
 
         public List<RequestResource> requests { get; set; }
-        
 
+        public List<NotificationUser> NotificationUser { get; set;}
+        
+        public List<FirebaseConnection> FirebaseConnections { get; set; }
     }
 
     

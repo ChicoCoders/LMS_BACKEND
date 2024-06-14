@@ -23,44 +23,42 @@ namespace LMS.Repository
             _jwTService = jwtService;
             _reservationService = reservationService;
         }
-        public async Task<bool> AddRequest(AddRequestDto request)
+        public async Task<bool> AddRequest(AddRequestDto request,HttpContext httpContext)
         {
+            var userName = _jwTService.GetUsername(httpContext);
             var resource = await _Context.Resources.FirstOrDefaultAsync(u => u.ISBN == request.ISBN);
-            var borrower = await _Context.Users.FirstOrDefaultAsync(u => u.UserName == request.BorrowerID);
+            var borrower = await _Context.Users.FirstOrDefaultAsync(u => u.UserName == userName);
 
-            //Decrease Quantity of resource by 1
-            resource.Quantity = resource.Quantity - 1;
-            resource.Borrowed = resource.Borrowed + 1;
-            await _Context.SaveChangesAsync();
+            var count = await _Context.Requests.Where(e => e.UserId == userName).CountAsync();
 
-
-            if (resource.Quantity < 0) //If not enough resources
+            if (resource.Quantity < 1) //If not enough resources
             {
-                resource.Quantity = resource.Quantity + 1;
-                resource.Borrowed = resource.Borrowed - 1;
-                await _Context.SaveChangesAsync();
                 throw new Exception("No of Books not enough");
             }
             else if (borrower.Status == "Loan") //If User in a loan
             {
-                resource.Quantity = resource.Quantity + 1;
-                resource.Borrowed = resource.Borrowed - 1;//nedd to add request field to db
-                await _Context.SaveChangesAsync();
                 throw new Exception("User in a loan");
             }
-            else  //If User Can borrow the book
+            else if (count >= 3)
             {
+                throw new Exception("You Exceed Request Count");
+            }
+            else
+            {
+                var req = await _Context.Requests.FirstOrDefaultAsync(e => e.UserId == userName && e.ResourceId == request.ISBN);
+                if (req != null)
+                {
+                    throw new Exception("You are already requested this ");
+                }
                 var newrequest = new RequestResource
                 {
                     ResourceId= request.ISBN,
-                    UserId=request.BorrowerID,
+                    UserId=userName,
                     Date=new DateOnly(2023,05,01),
                     Time=new TimeOnly(22,11)
                 };
 
                 
-                
-
                 _Context.Requests.Add(newrequest);//Add the Reservation
                 await _Context.SaveChangesAsync();
 
@@ -108,11 +106,11 @@ namespace LMS.Repository
             }
             else
             {
-                var resource = await _Context.Resources.FirstOrDefaultAsync(e => e.ISBN == request.ResourceId);
+               // var resource = await _Context.Resources.FirstOrDefaultAsync(e => e.ISBN == request.ResourceId);
                 var user = await _Context.Users.FirstOrDefaultAsync(e => e.UserName == request.UserId);
-                resource.Quantity=resource.Quantity+1;
-                resource.Borrowed = resource.Borrowed-1;//need to fixed
-                user.Status = "free";
+                //resource.Quantity=resource.Quantity+1;
+                //resource.Borrowed = resource.Borrowed-1;//need to fixed
+                //user.Status = "free";
                 _Context.Requests.Remove(request);
                  await _Context.SaveChangesAsync();
                  return true;

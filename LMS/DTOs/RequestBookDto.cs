@@ -2,7 +2,6 @@
 {
     public class AddRequestDto
     {
-        public string BorrowerID {  get; set; }
         public string ISBN {  get; set; }
 
     }

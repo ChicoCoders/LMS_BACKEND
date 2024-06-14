@@ -12,7 +12,7 @@
         public DateOnly ReturnDate { get; set; }
         public string Status { get; set; }
 
-          
+       public string ImagePath { get; set; }
 
     }
 }

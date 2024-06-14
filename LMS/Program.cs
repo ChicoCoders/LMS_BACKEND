@@ -9,8 +9,8 @@ using System.Text;
 using Hangfire;
 using Hangfire.SqlServer;
 using Microsoft.Extensions.Configuration;
-using LMS.Hubs;
-using static LMS.Hubs.MyHub;
+using FirebaseAdmin;
+using Google.Apis.Auth.OAuth2;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,6 +28,7 @@ builder.Services.AddScoped<IRequestService, RequestService>();
 builder.Services.AddScoped<IReportService, ReportService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IDashboardService,DashboardService>();
+builder.Services.AddScoped<ILocationService, LocationService>();
 builder.Services.AddScoped<JWTService>();
 
 
@@ -69,7 +70,10 @@ builder.Services.AddCors();
 
 builder.Services.AddDbContext<DataContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("DataContext")));
-
+FirebaseApp.Create(new AppOptions()
+{
+    Credential = GoogleCredential.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "serviceAccountKey.json")),
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -91,7 +95,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseCors(options=>options
-    .WithOrigins( "http://localhost:3000")
+    .WithOrigins("https://easylibro.online/")
     .AllowAnyHeader()
     .AllowAnyMethod()
     .AllowCredentials()
@@ -101,7 +105,7 @@ app.UseCors(options=>options
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseHangfireDashboard();
-app.MapHub<MessagingHub>("/Hubs/MyHub");
+
 app.MapControllers();
 
 app.Run();

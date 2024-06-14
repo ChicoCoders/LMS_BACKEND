@@ -49,6 +49,29 @@ namespace LMS.Migrations
                     b.ToTable("Cupboard");
                 });
 
+            modelBuilder.Entity("LMS.Models.FirebaseConnection", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("userName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("userName");
+
+                    b.ToTable("FirebaseConnections");
+                });
+
             modelBuilder.Entity("LMS.Models.Location", b =>
                 {
                     b.Property<string>("LocationNo")
@@ -67,7 +90,35 @@ namespace LMS.Migrations
                     b.ToTable("Locations");
                 });
 
-            modelBuilder.Entity("LMS.Models.Notification", b =>
+            modelBuilder.Entity("LMS.Models.NotificationUser", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("NotificationId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NotificationId");
+
+                    b.HasIndex("UserName");
+
+                    b.ToTable("NotificationUser");
+                });
+
+            modelBuilder.Entity("LMS.Models.Notifications", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -100,27 +151,6 @@ namespace LMS.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Notifications");
-                });
-
-            modelBuilder.Entity("LMS.Models.RemindNotification", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
-
-                    b.Property<string>("Content")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Subject")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("id");
-
-                    b.ToTable("RemindNotifications");
                 });
 
             modelBuilder.Entity("LMS.Models.RequestResource", b =>
@@ -261,35 +291,6 @@ namespace LMS.Migrations
                     b.ToTable("Resources");
                 });
 
-            modelBuilder.Entity("LMS.Models.UpdateNotifications", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
-
-                    b.Property<string>("Subject")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("books")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("ebooks")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("journals")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("others")
-                        .HasColumnType("bit");
-
-                    b.HasKey("id");
-
-                    b.ToTable("UpdateNotifications");
-                });
-
             modelBuilder.Entity("LMS.Models.User", b =>
                 {
                     b.Property<string>("UserName")
@@ -345,6 +346,17 @@ namespace LMS.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("LMS.Models.FirebaseConnection", b =>
+                {
+                    b.HasOne("LMS.Models.User", "User")
+                        .WithMany("FirebaseConnections")
+                        .HasForeignKey("userName")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("LMS.Models.Location", b =>
                 {
                     b.HasOne("LMS.Models.Cupboard", "cupboard")
@@ -354,6 +366,25 @@ namespace LMS.Migrations
                         .IsRequired();
 
                     b.Navigation("cupboard");
+                });
+
+            modelBuilder.Entity("LMS.Models.NotificationUser", b =>
+                {
+                    b.HasOne("LMS.Models.Notifications", "Notifications")
+                        .WithMany("NotificationUser")
+                        .HasForeignKey("NotificationId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("LMS.Models.User", "User")
+                        .WithMany("NotificationUser")
+                        .HasForeignKey("UserName")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Notifications");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("LMS.Models.RequestResource", b =>
@@ -450,8 +481,17 @@ namespace LMS.Migrations
                     b.Navigation("resources");
                 });
 
+            modelBuilder.Entity("LMS.Models.Notifications", b =>
+                {
+                    b.Navigation("NotificationUser");
+                });
+
             modelBuilder.Entity("LMS.Models.User", b =>
                 {
+                    b.Navigation("FirebaseConnections");
+
+                    b.Navigation("NotificationUser");
+
                     b.Navigation("Reservations");
 
                     b.Navigation("requests");
