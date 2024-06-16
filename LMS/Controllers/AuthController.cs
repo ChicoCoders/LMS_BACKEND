@@ -36,8 +36,8 @@ namespace LMS.Controllers
             {
                 return BadRequest("User not found");
             }
-          // if (!(BCrypt.Net.BCrypt.Verify( request.password, user.Password)))
-          if(request.password==user.Password)
+           if (!(BCrypt.Net.BCrypt.Verify( request.password, user.Password)))
+          //if(request.password==user.Password)
                 if(request.password != user.Password)
             {
                 return BadRequest("Wrong Password");
