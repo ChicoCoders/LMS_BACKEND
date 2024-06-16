@@ -36,8 +36,8 @@ namespace LMS.Controllers
             {
                 return BadRequest("User not found");
             }
-           if (!(BCrypt.Net.BCrypt.Verify( request.password, user.Password)))
-          //if(request.password==user.Password)
+          // if (!(BCrypt.Net.BCrypt.Verify( request.password, user.Password)))
+          if(request.password==user.Password)
                 if(request.password != user.Password)
             {
                 return BadRequest("Wrong Password");
@@ -61,7 +61,6 @@ namespace LMS.Controllers
                 message="success",
             });
         }
-
 
         [HttpPost("selectusertype")]
         public async Task<IActionResult> SelectUserType(string userType)
@@ -103,7 +102,6 @@ namespace LMS.Controllers
             });
         }
 
-
         [HttpGet("user")]
         public async Task<IActionResult> User()
         {
@@ -125,12 +123,10 @@ namespace LMS.Controllers
         public async Task<IActionResult> LogOut()
         {
             Response.Cookies.Delete("jwt");
-
-
             return Ok(
                 new
                 {
-                    message = "success"
+                    message = "logout"
                 }
             );
         }

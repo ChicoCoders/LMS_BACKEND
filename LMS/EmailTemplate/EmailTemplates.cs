@@ -8,7 +8,7 @@ namespace LMS.EmailTemplates
 {
     public class EmailTemplate
     {
-        public TextPart IssueBookEmail(Reservation reservation, string userName, string BookName)
+        public TextPart IssueBookEmail(Reservation reservation, string userName, Resource Book)
         {
             var htmlBody = new TextPart(TextFormat.Html)
             {
@@ -99,16 +99,16 @@ namespace LMS.EmailTemplates
                                 <div class=""left"">
                                     <p><strong>Reservation ID:</strong> {reservation.ReservationNo}</p>
                                     <p><strong>ISBN:</strong> {reservation.ResourceId}</p>
-                                    <p><strong>Book Name:</strong> {BookName}</p>
+                                    <p><strong>Book Name:</strong> {Book.Title}</p>
                                     <p><strong>Due Date:</strong> {reservation.DueDate}</p>
                                     <p><strong>Issue Date:</strong> {reservation.IssuedDate}</p>
                                     <p><strong>Returned Date:</strong> {reservation.ReturnDate}</p>
                                 </div>
                                 <div class=""right"">
-                                    <img src=""https://m.media-amazon.com/images/I/41HGL4D-xnL.jpg"" alt=""Book Image"" style=""width:140px;height:200px;"">
+                                    <img src={Book.ImageURL} alt=""Book Image"" style=""width:140px;height:200px;"">
                                 </div>
                             </div>
-                            <a href=""https://example.com"" ><div class=""visit-btn"">Go to Web App</div></a>
+                            <a href=""https://easylibro.online"" ><div class=""visit-btn"">Go to Web App</div></a>
                         </div>
                     </div>
                 </body>
@@ -116,6 +116,116 @@ namespace LMS.EmailTemplates
             };
             return htmlBody;
         }
+
+        public TextPart ReturnBookEmail(Reservation reservation, string userName, Resource Book)
+        {
+            var htmlBody = new TextPart(TextFormat.Html)
+            {
+                Text = $@"
+        <!DOCTYPE html>
+        <html lang=""en"">
+        <head>
+            <meta charset=""UTF-8"">
+            <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+            <title>Return Confirmation</title>
+            <style>
+                /* Reset styles */
+                body, html {{
+                    margin: 0;
+                    padding: 0;
+                    font-family: Arial, sans-serif;
+                    background-color: #f8f8f8;
+                }}
+                /* Container */
+                .container {{
+                    width: 100%;
+                    padding: 20px;
+                }}
+                /* Content box */
+                .content {{
+                    max-width: 600px;
+                    margin: 0 auto;
+                    background-color: #ffffff;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                }}
+                /* Header */
+                .header {{
+                    padding: 20px 40px;
+                    text-align: center;
+                    background-color: #28a745;
+                    color: #ffffff;
+                    border-top-left-radius: 8px;
+                    border-top-right-radius: 8px;
+                }}
+                .header h1 {{
+                    margin: 0;
+                    font-size: 24px;
+                }}
+                /* Details */
+                .details {{
+                    display: flex;
+                    border: 1px solid #e0e0e0;
+                    padding: 40px;
+                    color: #333333;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    justify-content: space-between; /* Align items evenly */
+                }}
+                .details .left {{
+                    flex: 1; /* Take up remaining space */
+                }}
+                .details .right {{
+                    flex-shrink: 0; /* Don't allow to shrink */
+                    margin-left: 80px; /* Add some space between left and right */
+                }}
+                .details p {{
+                    margin: 10px 0;
+                }}
+                /* Visit button */
+                .visit-btn {{
+                    padding: 10px 40px;
+                    text-align: center;
+                    background-color: #28a745;
+                    color: #ffffff;
+                    text-decoration: none;
+                    border-bottom-left-radius: 8px;
+                    border-bottom-right-radius: 8px;
+                    font-weight: bold;
+                    display: block;
+                }}
+            </style>
+        </head>
+        <body>
+            <div class=""container"">
+                <div class=""content"">
+                    <p>Dear {userName},</p>
+                    <p>We are pleased to confirm that the book you borrowed has been successfully returned. Thank you for using our services. We look forward to serving you again in the future. Should you have any questions or need further assistance, please feel free to reach out to us.</p>
+                    <div class=""header"">
+                        <h1>Return Confirmation</h1>
+                    </div>
+                    <div class=""details"">
+                        <div class=""left"">
+                            <p><strong>Reservation ID:</strong> {reservation.ReservationNo}</p>
+                            <p><strong>ISBN:</strong> {reservation.ResourceId}</p>
+                            <p><strong>Book Name:</strong> {Book.Title}</p>
+                            <p><strong>Due Date:</strong> {reservation.DueDate}</p>
+                            <p><strong>Issue Date:</strong> {reservation.IssuedDate}</p>
+                            <p><strong>Returned Date:</strong> {reservation.ReturnDate}</p>
+                        </div>
+                        <div class=""right"">
+                            <img src=""{Book.ImageURL}"" alt=""Book Image"" style=""width:140px;height:200px;"">
+                        </div>
+                    </div>
+                    <a href=""https://easylibro.online"" ><div class=""visit-btn"">Go to Web App</div></a>
+                </div>
+            </div>
+        </body>
+        </html>"
+            };
+            return htmlBody;
+        }
+
 
         public TextPart DefaultPassword(string password)
         {

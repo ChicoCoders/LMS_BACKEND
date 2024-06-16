@@ -76,6 +76,7 @@ namespace LMS.Repository
                     UserType = userdto.UserType,
                     AddedById = addedby,
                     Status = "free",
+                    AddedDate= DateOnly.FromDateTime(DateTime.Now)
                 };
 
                 //Add user object to _Context

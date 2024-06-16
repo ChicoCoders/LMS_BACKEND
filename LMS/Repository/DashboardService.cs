@@ -1,5 +1,6 @@
 ﻿using LMS.DTOs;
 using Microsoft.EntityFrameworkCore;
+using System;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace LMS.Repository
@@ -15,12 +16,13 @@ namespace LMS.Repository
 
         public async Task<DashboardStatics> getAdminDashboradData()
         {
+            var count =_dataContext.Resources.Sum(e=>e.Quantity)+ _dataContext.Resources.Sum(e => e.Borrowed);
             var Statics = new DashboardStatics
             {
-                Total = _dataContext.Resources.Count(),
-                Navels = _dataContext.Resources.Where(e => e.Type == "Navel").Count(),
-                Journals = _dataContext.Resources.Where(e => e.Type == "Jounals").Count(),
-                Ebooks = _dataContext.Resources.Where(e => e.Type == "Ebooks").Count(),
+                Total = count,
+                IssueToday = _dataContext.Reservations.Where(e => e.IssuedDate== DateOnly.FromDateTime(DateTime.Now)).Count(),
+                ReturnToday = _dataContext.Reservations.Where(e => e.ReturnDate == DateOnly.FromDateTime(DateTime.Now)).Count(),
+                Locations = _dataContext.Cupboard.Count(),
                 Users = _dataContext.Users.Count(),
                 Reservations = _dataContext.Reservations.Count(),
                 Requests = _dataContext.Requests.Count(),
@@ -71,13 +73,14 @@ namespace LMS.Repository
             return lastWeekList;
         }
 
+
         public async Task<List<LastWeekReservations>> getLastWeekUsers()
         {
             var lastWeekList = new List<LastWeekReservations>();
             for (int x = 6; x >= 0; x--)
             {
                 DateOnly issueDate = DateOnly.FromDateTime(DateTime.Today.AddDays(-x));
-                int count = _dataContext.Reservations.Where(e => e.IssuedDate == issueDate).Count();
+                int count = _dataContext.Users.Where(e => e.AddedDate == issueDate).Count();
 
                 var a = new LastWeekReservations
                 {

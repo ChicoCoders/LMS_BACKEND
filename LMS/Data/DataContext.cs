@@ -28,7 +28,7 @@ namespace LMS.Data
         {
            
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer("Server=.;Database=ABC;Integrated Security=True;TrustServerCertificate=true");
+            optionsBuilder.UseSqlServer("Server=tcp:easylibro.database.windows.net,1433;Initial Catalog=easylibro;Persist Security Info=False;User ID=easylibro;Password=kavidil2001#;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

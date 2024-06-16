@@ -65,5 +65,11 @@ namespace LMS.Controllers
             var httpContext = HttpContext;
             return await _notificationService.UnreadCount(httpContext);
         }
+
+        [HttpPost("RemoveFireBaseToken")]
+        public async Task<bool> RemoveFireBaseToken(SetToken setToken)
+        {
+            return await _notificationService.RemoveFireBaseToken(setToken);
+        }
     }
 }

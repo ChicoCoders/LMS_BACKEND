@@ -34,6 +34,8 @@ namespace LMS.Models
         [Required]
         public User AddedBy { get; set; }
 
+        public DateOnly AddedDate { get; set; }
+
         public List<Reservation> Reservations { get; set; }
 
         public List<RequestResource> requests { get; set; }

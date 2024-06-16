@@ -95,7 +95,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseCors(options=>options
-    .WithOrigins("https://easylibro.online/")
+    .WithOrigins("http://localhost:3000/")
     .AllowAnyHeader()
     .AllowAnyMethod()
     .AllowCredentials()

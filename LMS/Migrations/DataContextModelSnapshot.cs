@@ -300,6 +300,9 @@ namespace LMS.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<DateOnly>("AddedDate")
+                        .HasColumnType("date");
+
                     b.Property<string>("Address")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

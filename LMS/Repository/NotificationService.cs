@@ -1,17 +1,8 @@
 ﻿using LMS.DTOs;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using LMS.Helpers;
 using LMS.EmailTemplates;
-using LMS.Models;
-using Microsoft.AspNetCore.Http;
-using FirebaseAdmin;
-using Google.Apis.Auth.OAuth2;
-using Newtonsoft.Json.Linq;
 using FirebaseAdmin.Messaging;
-using Microsoft.AspNet.SignalR.Hubs;
-
-
 
 
 namespace LMS.Repository
@@ -50,8 +41,22 @@ namespace LMS.Repository
             await _Context.SaveChangesAsync();
             return true;
         }
-
-
+        public async Task<bool> RemoveFireBaseToken(SetToken setToken)
+        {
+            var user = await _Context.Users.FirstOrDefaultAsync(e => e.UserName == setToken.UserName);
+            if (user == null)
+            {
+                throw new Exception("User not found");
+            }
+            var connection = await _Context.FirebaseConnections.FirstOrDefaultAsync(e => e.userName == setToken.UserName && e.Token == setToken.Token);
+            if (connection == null)
+            {
+                return false;
+            }
+            _Context.FirebaseConnections.Remove(connection);
+            await _Context.SaveChangesAsync();
+            return true;
+        }
         public async Task<bool> NewNotice(NoticeDto newnotice)
         {
 
@@ -83,6 +88,9 @@ namespace LMS.Repository
                 {
                      user = await _Context.Users.Where(e => e.UserType == newnotice.UserName).ToListAsync();
                 }
+
+                var tokenlist = new List<string>();
+
                 foreach (var x in user)
                 {
                     var notificationuser = new NotificationUser
@@ -91,25 +99,26 @@ namespace LMS.Repository
                         NotificationId = notice.Id,
                         Status = "unread"
                     };
-                    var tokens= await _Context.FirebaseConnections.Where(e => e.userName == x.UserName).ToListAsync();
 
-                    foreach(var y in tokens)
-                    {
-                        var message = new Message()
-                        {
-                            Token = y.Token,
-                            Notification = new Notification()
-                            {
-                                Title = newnotice.Subject,
-                                Body = newnotice.Description
-                            }
-                        };
-                        string response = await FirebaseMessaging.DefaultInstance.SendAsync(message);
-                    }
-                   
+                    var tokens = await _Context.FirebaseConnections.Where(e => e.userName == x.UserName).Select(e => e.Token).ToListAsync();
 
+                    tokenlist.AddRange(tokens);
                     _Context.NotificationUser.Add(notificationuser);
                 }
+                
+               
+              
+                    var message = new MulticastMessage()
+                    {
+                        Tokens = tokenlist,
+                        Notification = new Notification()
+                        {
+                            Title = newnotice.Subject,
+                            Body = newnotice.Description
+                        }
+                    };
+                    var response = await FirebaseMessaging.DefaultInstance.SendMulticastAsync(message);
+               
 
             }
             else
@@ -125,20 +134,18 @@ namespace LMS.Repository
                     NotificationId = notice.Id,
                     Status = "unread"
                 };
-                var tokens = await _Context.FirebaseConnections.Where(e => e.userName == user.UserName).ToListAsync();
-                foreach (var y in tokens)
-                {
-                    var message = new Message()
+                var tokens = await _Context.FirebaseConnections.Where(e => e.userName == user.UserName).Select(e=>e.Token).ToListAsync();
+                
+                    var message = new MulticastMessage()
                     {
-                        Token = y.Token,
+                        Tokens = tokens,
                         Notification = new Notification()
                         {
                             Title = newnotice.Subject,
                             Body = newnotice.Description
                         }
                     };
-                    string response = await FirebaseMessaging.DefaultInstance.SendAsync(message);
-                }
+                    var response = await FirebaseMessaging.DefaultInstance.SendMulticastAsync(message);
 
                 
 
@@ -148,8 +155,6 @@ namespace LMS.Repository
             await _Context.SaveChangesAsync();
             return true;
         }
-
-
         public async Task<List<NewNoticeDto>> GetNotification()
         {
 
@@ -171,7 +176,6 @@ namespace LMS.Repository
             
             return notificationlist;
         }
-
         public async Task<List<MyNotificationDto>> GetMyNotification(HttpContext httpContext)
         {
             var user = _jwtService.GetUsername(httpContext);
@@ -199,7 +203,6 @@ namespace LMS.Repository
             return mynotifications;
 
         }
-
         public async Task<bool> SetRemind(Reservation reservation)
         {
             var Description = "The book " + reservation.ResourceId + " is overdue! Please return it by " + reservation.DueDate + " to avoid any fines.";
@@ -245,7 +248,6 @@ namespace LMS.Repository
             await _Context.SaveChangesAsync();
             return true;
         }
-
         public async Task<bool> IssueNotification(int reservationNo)
         {
             var reservation = await _Context.Reservations.FirstOrDefaultAsync(e => e.Id == reservationNo);
@@ -301,7 +303,6 @@ namespace LMS.Repository
             }
             
         }
-
         public async Task<bool> ReturnNotification(int reservationNo)
         {
             var reservation = await _Context.Reservations.FirstOrDefaultAsync(e => e.Id == reservationNo);
@@ -354,7 +355,6 @@ namespace LMS.Repository
             }
 
         }
-
         public async Task<bool> RemoveNotification(int id)
         {
             var notification = await _Context.Notifications.FirstOrDefaultAsync(e => e.Id == id);
@@ -371,7 +371,6 @@ namespace LMS.Repository
                 return false;
             }
         }
-
         public async Task<bool> MarkAsRead(int id)
         {
             var notification = await _Context.NotificationUser.FirstOrDefaultAsync(e => e.Id == id);
@@ -386,7 +385,6 @@ namespace LMS.Repository
                 return false;
             }
         }
-
         public async Task<int> UnreadCount(HttpContext httpContext)
         {
             var user = _jwtService.GetUsername(httpContext);

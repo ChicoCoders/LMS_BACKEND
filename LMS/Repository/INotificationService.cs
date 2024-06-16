@@ -12,6 +12,7 @@ namespace LMS.Repository
         Task<bool> ReturnNotification(int reservationNo);
         Task<bool> RemoveNotification(int reservationNo);
         Task<bool> SetFireBaseToken(SetToken setToken);
+        Task<bool> RemoveFireBaseToken(SetToken setToken);
         Task<bool> MarkAsRead(int id);
         Task<int> UnreadCount(HttpContext httpContext);
     }

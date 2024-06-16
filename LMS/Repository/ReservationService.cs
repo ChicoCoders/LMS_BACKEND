@@ -1,15 +1,8 @@
 ﻿using LMS.DTOs;
 using LMS.EmailTemplates;
 using LMS.Helpers;
-using LMS.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Microsoft.VisualBasic;
-using Org.BouncyCastle.Tls;
-using System.Linq;
-using System.Runtime.InteropServices;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace LMS.Repository
 {
@@ -29,8 +22,6 @@ namespace LMS.Repository
             _emailService = emailService;
             _jwtService = jwtService;
         }
-
-
         public async Task<IActionResult> LoadIssueForm(string isbn)
         {
 
@@ -124,7 +115,7 @@ namespace LMS.Repository
                 {
                     try
                     {
-                        var htmlBody = new EmailTemplate().IssueBookEmail(reservation,borrower.FName+" "+borrower.LName,resource.Title);
+                        var htmlBody = new EmailTemplate().IssueBookEmail(reservation,borrower.FName+" "+borrower.LName,resource);
                         await _emailService.SendEmail(htmlBody, borrower.Email, "Successfully Issue the Book" + " " + reservation.ResourceId);
                     }
                     catch
@@ -204,7 +195,7 @@ namespace LMS.Repository
                         try
                         {
                             
-                            var htmlBody = new EmailTemplate().IssueBookEmail(reservation, borrower.FName + " " + borrower.LName, resource.Title);
+                            var htmlBody = new EmailTemplate().ReturnBookEmail(reservation, borrower.FName + " " + borrower.LName, resource);
                             await _emailService.SendEmail(htmlBody,borrower.Email,"Successfully Return the Book"+" "+reservation.ResourceId);
                             
                         }
@@ -222,7 +213,6 @@ namespace LMS.Repository
                 }
             }
         }
-
         public async Task<IActionResult> SearchReservation(SearchDetails details,HttpContext httpContext)
         {
             var userName = _jwtService.GetUsername(httpContext);
@@ -304,7 +294,6 @@ namespace LMS.Repository
 
 
         }
-
         public async Task<IActionResult> deleteReservation(int id)
         {
             var reservation = await _Context.Reservations.FirstOrDefaultAsync(e => e.Id == id);
@@ -327,7 +316,6 @@ namespace LMS.Repository
             }
                 
         }
-
         public async Task<IActionResult> extendDue(int id, string due)
         {
             var reservation = await _Context.Reservations.FirstOrDefaultAsync(e => e.Id == id);
@@ -343,7 +331,6 @@ namespace LMS.Repository
             }
 
         }
-
         public async Task setOverdue()
         {
             var currentDate = DateOnly.FromDateTime(DateTime.Today);
