@@ -15,5 +15,6 @@ namespace LMS.Repository
         Task<bool> RemoveFireBaseToken(SetToken setToken);
         Task<bool> MarkAsRead(int id);
         Task<int> UnreadCount(HttpContext httpContext);
+        Task<bool> BookAddedNotifications();
     }
 }

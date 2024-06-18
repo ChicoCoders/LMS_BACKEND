@@ -1,11 +1,15 @@
 ﻿using LMS.DTOs;
+using Microsoft.AspNetCore.Mvc;
 
 namespace LMS.Repository
 {
     public interface IDashboardService
     {
-        Task<DashboardStatics> getAdminDashboradData();
-        Task<List<ReservationDto>> getOverdueList();
+        Task<IActionResult> getDashboradData(HttpContext httpContext);
+        Task<IActionResult> getOverdueList(HttpContext httpContext);
+        Task<IActionResult> getAnouncement(HttpContext httpContext);
         Task<List<LastWeekReservations>> getLastWeekReservations();
+        Task<List<LastWeekReservations>> getLastWeekUsers();
+        
     }
 }

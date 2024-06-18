@@ -9,5 +9,6 @@ namespace LMS.Repository
         Task<List<ResourceListDto>> SearchResources(SearchbookDto searchbookDto);
         Task<bool> EditResource(AddBookRequestDto book);
         Task<AboutResourceDto> AboutResource(string isbn);
+        Task WeeklyBookUpdates();
     }
 }

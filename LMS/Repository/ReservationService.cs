@@ -334,9 +334,9 @@ namespace LMS.Repository
         public async Task setOverdue()
         {
             var currentDate = DateOnly.FromDateTime(DateTime.Today);
-            var overdueRecords = _Context.Reservations
+            var overdueRecords =await _Context.Reservations
                .Where(e => e.Status == "borrowed" && e.DueDate == currentDate)
-               .ToList();
+               .ToListAsync();
 
             foreach (var record in overdueRecords)
             {
@@ -346,7 +346,7 @@ namespace LMS.Repository
 
             await _Context.SaveChangesAsync();
 
-           
+            Console.WriteLine("Recurring job scheduled to set overdue reservations.");
         }
 
 

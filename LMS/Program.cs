@@ -61,7 +61,6 @@ builder.Services.AddHangfire((sp, config) =>
 });
 builder.Services.AddHangfireServer();
 
-builder.Services.AddSignalR();
 
 // Add the processing server as IHostedService
 
@@ -74,7 +73,9 @@ FirebaseApp.Create(new AppOptions()
 {
     Credential = GoogleCredential.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "serviceAccountKey.json")),
 });
+
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 app.UseCors(policy => policy.AllowAnyHeader()

@@ -12,12 +12,14 @@ namespace LMS.Repository
 
         private readonly DataContext _Context;
         private readonly JWTService _jWTService;
+        private readonly INotificationService _notificationService;
 
         //Contructor of the ResourceService
-        public ResourceService(DataContext Context,JWTService jWTService)
+        public ResourceService(DataContext Context,JWTService jWTService,INotificationService notificationService)
         {
             _Context = Context;
             _jWTService = jWTService;
+            _notificationService= notificationService;
         }
 
         public async Task<AddBookResponseDto> AddResource(AddBookRequestDto book,HttpContext httpContext)
@@ -223,6 +225,17 @@ namespace LMS.Repository
                         Imagepath=resource.ImageURL
                 };
                 return res;
+            }
+        }
+
+        public async Task WeeklyBookUpdates()
+        {
+            var oneWeekAgo = DateTime.Now.AddDays(-7);
+            var count=await _Context.Resources.Where(e=>e.AddedOn>= oneWeekAgo).CountAsync();
+            Console.WriteLine("Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii");
+            if (count > 0)
+            {
+                await _notificationService.BookAddedNotifications();
             }
         }
 

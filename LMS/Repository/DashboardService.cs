@@ -1,5 +1,9 @@
 ﻿using LMS.DTOs;
+using LMS.Helpers;
+using LMS.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using MimeKit.Cryptography;
 using System;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -8,33 +12,62 @@ namespace LMS.Repository
     public class DashboardService : IDashboardService
     {
         private readonly DataContext _dataContext;
+        private readonly JWTService _jwt;
 
-        public DashboardService(DataContext dataContext)
+        public DashboardService(DataContext dataContext,JWTService jWTService)
         {
             _dataContext = dataContext;
+            _jwt = jWTService;
         }
 
-        public async Task<DashboardStatics> getAdminDashboradData()
+        public async Task<IActionResult> getDashboradData(HttpContext httpContext)
         {
             var count =_dataContext.Resources.Sum(e=>e.Quantity)+ _dataContext.Resources.Sum(e => e.Borrowed);
-            var Statics = new DashboardStatics
+            var usertype = _jwt.GetUserType(httpContext);
+            if (usertype == "admin")
             {
-                Total = count,
-                IssueToday = _dataContext.Reservations.Where(e => e.IssuedDate== DateOnly.FromDateTime(DateTime.Now)).Count(),
-                ReturnToday = _dataContext.Reservations.Where(e => e.ReturnDate == DateOnly.FromDateTime(DateTime.Now)).Count(),
-                Locations = _dataContext.Cupboard.Count(),
-                Users = _dataContext.Users.Count(),
-                Reservations = _dataContext.Reservations.Count(),
-                Requests = _dataContext.Requests.Count(),
-                OverDue = _dataContext.Reservations.Where(e => e.Status == "overdue").Count()
-            };
+                var Statics = new AdminDashboardStatics
+                {
+                    Total = count,
+                    IssueToday = await _dataContext.Reservations.Where(e => e.IssuedDate == DateOnly.FromDateTime(DateTime.Now)).CountAsync(),
+                    ReturnToday = await _dataContext.Reservations.Where(e => e.ReturnDate == DateOnly.FromDateTime(DateTime.Now)).CountAsync(),
+                    Locations = await _dataContext.Cupboard.CountAsync(),
+                    Users = await _dataContext.Users.CountAsync(),
+                    Reservations = await _dataContext.Reservations.CountAsync(),
+                    Requests = await _dataContext.Requests.CountAsync(),
+                    OverDue = await _dataContext.Reservations.Where(e => e.Status == "overdue").CountAsync()
+                };
 
-            return Statics;
+                return new OkObjectResult(Statics);
+            }if(usertype == "patron")
+            {
+                var username = _jwt.GetUsername(httpContext);
+                var user = await _dataContext.Users.FirstOrDefaultAsync(e => e.UserName == username);   
+                var Statics = new PatronDashboardStatics
+                {
+                    Status =user.Status,
+                    myReservations = await _dataContext.Reservations.Where(e => e.BorrowerID == username).CountAsync(),
+                    Requests = await _dataContext.Requests.Where(e => e.UserId == username).CountAsync(),
+                    Penalty = 0
+                };
+                return new OkObjectResult(Statics);
+            }
+            return new BadRequestResult();
         }
-        public async Task<List<ReservationDto>> getOverdueList()
+        public async Task<IActionResult> getOverdueList(HttpContext httpContext)
         {
+            var usertype = _jwt.GetUserType(httpContext);
+            var username = _jwt.GetUsername(httpContext);
+
             var k = new List<Reservation>();
-            k = _dataContext.Reservations.Where(e => e.Status == "overdue").ToList();
+            if (usertype == "admin")
+            {
+                k = _dataContext.Reservations.Where(e => e.Status == "overdue").ToList();
+            }
+            else if (usertype == "patron")
+            {
+                k = _dataContext.Reservations.Where(e => e.BorrowerID == username).ToList();
+            }
 
             List<ReservationDto> reservationlist = new List<ReservationDto>();
             foreach (var x in k)
@@ -51,7 +84,7 @@ namespace LMS.Repository
                 };
                 reservationlist.Add(res);
             }
-            return reservationlist;
+            return new OkObjectResult( reservationlist);
 
         }
 
@@ -90,6 +123,15 @@ namespace LMS.Repository
                 lastWeekList.Add(a);
             }
             return lastWeekList;
+        }
+
+        public async Task<IActionResult> getAnouncement(HttpContext httpContext)
+        {
+            var username = _jwt.GetUsername(httpContext);
+            var notification = _dataContext.Notifications
+                               .Where(s => _dataContext.NotificationUser.Any(e => e.UserName == username  && e.NotificationId == s.Id && s.Type== "notice"))
+                               .ToList().Select(e=>e.Description);
+            return new OkObjectResult(notification);
         }
     }
 }

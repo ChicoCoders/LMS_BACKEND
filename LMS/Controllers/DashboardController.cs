@@ -18,16 +18,18 @@ namespace LMS.Controllers
 
 
 
-       [HttpPost("getAdminDashboradData")]
-        public async Task<DashboardStatics> getAdminDashboradData()
+       [HttpPost("getDashboradData")]
+        public async Task<IActionResult> getDashboradData()
         {
-            return await _dashboardService.getAdminDashboradData();
+            var httpContext = HttpContext;
+            return await _dashboardService.getDashboradData(httpContext);
         }
 
         [HttpPost("getOverDueList")]
-        public async Task<List<ReservationDto>> getOverdueList()
+        public async Task<IActionResult> getOverdueList()
         {
-            return await _dashboardService.getOverdueList();
+            var httpContext = HttpContext;
+            return await _dashboardService.getOverdueList(httpContext);
         }
 
         [HttpPost("getLastWeekReservations")]
@@ -35,5 +37,19 @@ namespace LMS.Controllers
         {
             return await _dashboardService.getLastWeekReservations();
         }
+        [HttpPost("getLastWeekUsers")]
+        public async Task<List<LastWeekReservations>> getLastWeekUsers()
+        {
+            return await _dashboardService.getLastWeekUsers();
+        }
+        [HttpPost("getAnouncement")]
+        public async Task<IActionResult> getAnouncement()
+        {
+            var httpContext = HttpContext;
+            return await _dashboardService.getAnouncement(httpContext);
+
+        }
+
+
     }
 }

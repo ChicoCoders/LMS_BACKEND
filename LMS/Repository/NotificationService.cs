@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using LMS.Helpers;
 using LMS.EmailTemplates;
 using FirebaseAdmin.Messaging;
+using Microsoft.Identity.Client;
 
 
 namespace LMS.Repository
@@ -69,7 +70,7 @@ namespace LMS.Repository
                 Date= DateOnly.FromDateTime(DateTime.Now),
                 time= TimeOnly.FromDateTime(DateTime.Now),
                 ToUser = newnotice.UserName,
-                Type="Notices"
+                Type="notice"
             };
             _Context.Notifications.Add(notice);
             await _Context.SaveChangesAsync();
@@ -354,6 +355,34 @@ namespace LMS.Repository
                 return false;
             }
 
+        }
+        public async Task<bool> BookAddedNotifications()
+        {
+            var Description = "Some new books had been added to the library. Check it out! by login to the website.";
+            var notification = new Notifications
+            {
+                Title = "New Books Added",
+                Description = Description,
+                ToUser = "all",
+                Date = DateOnly.FromDateTime(DateTime.Now),
+                time = TimeOnly.FromDateTime(DateTime.Now),
+                Type = "bookupdates"
+            };
+            await _Context.Notifications.AddAsync(notification);
+            await _Context.SaveChangesAsync();
+            var tokens = await _Context.FirebaseConnections.Select(e => e.Token).ToListAsync();
+
+            var message = new MulticastMessage()
+            {
+                Tokens = tokens,
+                Notification = new Notification()
+                {
+                    Title = notification.Title,
+                    Body = Description
+                }
+            };
+            var response = await FirebaseMessaging.DefaultInstance.SendMulticastAsync(message);
+            return true;
         }
         public async Task<bool> RemoveNotification(int id)
         {
