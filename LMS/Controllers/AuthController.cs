@@ -50,15 +50,16 @@ namespace LMS.Controllers
             };
             var jwt = _jwtService.Generate(user.UserName,user.UserType);
             Response.Cookies.Delete("jwt");
-            Response.Cookies.Append("jwt", jwt, new CookieOptions
+            var cookie = new CookieOptions
             {
                 HttpOnly = false,
                 Expires = DateTime.Now.AddHours(3),
-            }
-            );
+            };
+            Response.Cookies.Append("jwt", jwt, cookie);
 
             return Ok(new{
-                message="success",
+                token = jwt,
+                message ="success",
             });
         }
 
@@ -66,7 +67,8 @@ namespace LMS.Controllers
         public async Task<IActionResult> SelectUserType(string userType)
         {
             var userName = _jwtService.GetUsername(HttpContext);
-            var user=await _Context.Users.FirstOrDefaultAsync(e=>e.UserName == userName);
+            var user = await _Context.Users.FirstOrDefaultAsync(e => e.UserName == userName);
+            var jwt = "";
 
             if (user == null)
             {
@@ -74,21 +76,24 @@ namespace LMS.Controllers
             }
             if (userType=="admin")
             {
-                var jwt = _jwtService.Generate(user.UserName, user.UserType);
+                jwt = _jwtService.Generate(user.UserName, user.UserType);
                 Response.Cookies.Append("jwt", jwt, new CookieOptions
                 {
                     HttpOnly = false,
+                    SameSite = SameSiteMode.None,
+                    Secure = true,
                     Expires = DateTime.Now.AddHours(3),
                 }
                );
             }
             if(userType =="patron")
             {
-                var jwt = _jwtService.Generate(user.UserName, "patron");
+                jwt = _jwtService.Generate(user.UserName, "patron");
                 Response.Cookies.Append("jwt", jwt, new CookieOptions
                 {
-
                     HttpOnly = false,
+                    SameSite = SameSiteMode.None,
+                    Secure = true,
                     Expires = DateTime.Now.AddHours(3),
 
                 }
@@ -98,6 +103,7 @@ namespace LMS.Controllers
 
             return Ok(new
             {
+                token=jwt,
                 message = "success",
             });
         }

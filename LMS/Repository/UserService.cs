@@ -76,7 +76,7 @@ namespace LMS.Repository
                     UserType = userdto.UserType,
                     AddedById = addedby,
                     Status = "free",
-                    AddedDate= DateOnly.FromDateTime(DateTime.Now)
+                    AddedDate = DateOnly.FromDateTime(DateTime.Now)
                 };
 
                 //Add user object to _Context
@@ -145,7 +145,7 @@ namespace LMS.Repository
                     DOB = user.DOB,
                     Address = user.Address,
                     Status = user.Status,
-                    nic=user.NIC,
+                    nic = user.NIC,
                     reservationcount = count
                 };
 
@@ -266,11 +266,11 @@ namespace LMS.Repository
             }
             else
             {
-               
-                    user.Password = BCrypt.Net.BCrypt.HashPassword(request.NewPassword);
-                    await _Context.SaveChangesAsync();
-                    return true;
-              
+
+                user.Password = BCrypt.Net.BCrypt.HashPassword(request.NewPassword);
+                await _Context.SaveChangesAsync();
+                return true;
+
             }
         }
 
@@ -278,7 +278,7 @@ namespace LMS.Repository
 
         public async Task<AboutUserDto> GetMyData(HttpContext httpContext)
         {
-            var username= _jwt.GetUsername(httpContext);
+            var username = _jwt.GetUsername(httpContext);
             var userType = _jwt.GetUserType(httpContext);
             var user = await _Context.Users.FirstOrDefaultAsync(e => e.UserName == username);
 
@@ -298,16 +298,16 @@ namespace LMS.Repository
                     ActualType = user.UserType,
                     Phone = user.PhoneNumber,
                     DOB = user.DOB,
-                    nic=user.NIC,
+                    nic = user.NIC,
                     Address = user.Address,
                     Status = user.Status,
                 };
 
                 return aboutuser;
             }
-        } 
-    
-       public async Task<String> GetEmail(HttpContext httpContext)
+        }
+
+        public async Task<String> GetEmail(HttpContext httpContext)
         {
             var username = _jwt.GetUsername(httpContext);
             var user = await _Context.Users.FirstOrDefaultAsync(e => e.UserName == username);
@@ -331,7 +331,7 @@ namespace LMS.Repository
             {
                 throw new Exception("User Not Found");
             }
-            else if(await _Context.Users.AnyAsync(e => e.Email == newEmail))
+            else if (await _Context.Users.AnyAsync(e => e.Email == newEmail))
             {
                 throw new Exception("Email Already Exists");
             }
@@ -343,6 +343,7 @@ namespace LMS.Repository
             }
         }
 
+       
         public async Task<bool> SendForgotPasswordEmail(string email)
         {
             var user = await _Context.Users.FirstOrDefaultAsync(e => e.Email == email);
@@ -355,7 +356,7 @@ namespace LMS.Repository
                 try
                 {
                     var token = _jwt.GenerateResetPasswordToken(user.UserName,user.UserType);
-                    var passwordResetLink = $"http://localhost:3000/LogIN/SetToken?jwt={token}";
+                    var passwordResetLink = $"https://easylibro.online/LogIN/SetToken?jwt={token}";
                     var htmlBody = new  EmailTemplate().ResetPassword(passwordResetLink);
 
                     await _emailService.SendEmail(htmlBody, email, "Reset password Easy Libro");

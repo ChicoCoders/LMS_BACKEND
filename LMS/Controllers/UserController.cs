@@ -92,12 +92,16 @@ namespace LMS.Controllers
             return await _userService.ResetPassword(request, x);
         }
 
-        [HttpGet("forgetPassword")]
-        public async Task<bool> ForgetPassword(string email)
+        public class email
+        {
+            public string emailaddress { get; set; }
+        }
+        [HttpPost("forgetPassword")]
+        public async Task<bool> ForgetPassword(email email)
         {
 
 
-            return await _userService.SendForgotPasswordEmail(email);
+            return await _userService.SendForgotPasswordEmail(email.emailaddress);
         }
 
        public class user

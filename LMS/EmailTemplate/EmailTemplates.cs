@@ -367,7 +367,7 @@ namespace LMS.EmailTemplates
 
                             <p>Please make sure to change your password after logging in for the first time to ensure the security of your account.</p>
 
-                            <p>If you have any questions or need assistance, feel free to contact our support team at <a href=""""mailto:support@example.com"""">support@example.com</a>.</p>
+                            <p>If you have any questions or need assistance, feel free to contact our support team at <a href=""""mailto:easylibro.online"""">support@example.com</a>.</p>
 
                             <footer>
                               Best regards,<br>

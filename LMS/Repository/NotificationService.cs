@@ -4,6 +4,7 @@ using LMS.Helpers;
 using LMS.EmailTemplates;
 using FirebaseAdmin.Messaging;
 using Microsoft.Identity.Client;
+using Microsoft.AspNetCore.Mvc;
 
 
 namespace LMS.Repository
@@ -106,9 +107,8 @@ namespace LMS.Repository
                     tokenlist.AddRange(tokens);
                     _Context.NotificationUser.Add(notificationuser);
                 }
-                
-               
-              
+                try
+                {
                     var message = new MulticastMessage()
                     {
                         Tokens = tokenlist,
@@ -119,6 +119,10 @@ namespace LMS.Repository
                         }
                     };
                     var response = await FirebaseMessaging.DefaultInstance.SendMulticastAsync(message);
+                }catch(Exception e)
+                {
+                   
+                }
                
 
             }
@@ -136,7 +140,8 @@ namespace LMS.Repository
                     Status = "unread"
                 };
                 var tokens = await _Context.FirebaseConnections.Where(e => e.userName == user.UserName).Select(e=>e.Token).ToListAsync();
-                
+                try
+                {
                     var message = new MulticastMessage()
                     {
                         Tokens = tokens,
@@ -147,8 +152,10 @@ namespace LMS.Repository
                         }
                     };
                     var response = await FirebaseMessaging.DefaultInstance.SendMulticastAsync(message);
-
-                
+                }catch(Exception e)
+                {
+                  
+                }
 
                 _Context.NotificationUser.Add(notificationuser);
             }
@@ -228,16 +235,23 @@ namespace LMS.Repository
             var tokens = await _Context.FirebaseConnections.Where(e => e.userName == reservation.BorrowerID).ToListAsync();
             foreach (var x in tokens)
             {
-                var message = new Message()
+                try
                 {
-                    Token = x.Token,
-                    Notification = new Notification()
+                    var message = new Message()
                     {
-                        Title = "Reservation Reminder",
-                        Body = Description
-                    }
-                };
-                string response = await FirebaseMessaging.DefaultInstance.SendAsync(message);
+                        Token = x.Token,
+                        Notification = new Notification()
+                        {
+                            Title = "Reservation Reminder",
+                            Body = Description
+                        }
+                    };
+                    string response = await FirebaseMessaging.DefaultInstance.SendAsync(message);
+                }
+                catch (Exception e)
+                {
+                    
+                }
             }
            
 
@@ -279,17 +293,24 @@ namespace LMS.Repository
 
 
                 var tokens = await _Context.FirebaseConnections.Where(e => e.userName == reservation.BorrowerID).Select(e=>e.Token).ToListAsync();
-                var message = new MulticastMessage()
+                try
                 {
-                    Tokens = tokens,
-                    Notification = new Notification()
+                    var message = new MulticastMessage()
                     {
-                        Title = "Return Resource Successfully.ReservationNo : " + reservation.Id,
-                        Body = Description
-                    }
-                };
+                        Tokens = tokens,
+                        Notification = new Notification()
+                        {
+                            Title = "Return Resource Successfully.ReservationNo : " + reservation.Id,
+                            Body = Description
+                        }
+                    };
 
-                var response = await FirebaseMessaging.DefaultInstance.SendMulticastAsync(message);
+                    var response = await FirebaseMessaging.DefaultInstance.SendMulticastAsync(message);
+                }
+                catch (Exception e)
+                {
+                    
+                }
 
 
 
@@ -330,7 +351,8 @@ namespace LMS.Repository
                 };
 
                 var tokens = await _Context.FirebaseConnections.Where(e => e.userName == reservation.BorrowerID).Select(e=>e.Token).ToListAsync();
-               
+                try
+                {
                     var message = new MulticastMessage()
                     {
                         Tokens = tokens,
@@ -340,8 +362,13 @@ namespace LMS.Repository
                             Body = Description
                         }
                     };
-                   
+
                     var response = await FirebaseMessaging.DefaultInstance.SendMulticastAsync(message);
+                }
+                catch (Exception e)
+                {
+                    
+                }
                    
                         
                     
@@ -371,17 +398,22 @@ namespace LMS.Repository
             await _Context.Notifications.AddAsync(notification);
             await _Context.SaveChangesAsync();
             var tokens = await _Context.FirebaseConnections.Select(e => e.Token).ToListAsync();
-
-            var message = new MulticastMessage()
+            try
             {
-                Tokens = tokens,
-                Notification = new Notification()
+                var message = new MulticastMessage()
                 {
-                    Title = notification.Title,
-                    Body = Description
-                }
-            };
-            var response = await FirebaseMessaging.DefaultInstance.SendMulticastAsync(message);
+                    Tokens = tokens,
+                    Notification = new Notification()
+                    {
+                        Title = notification.Title,
+                        Body = Description
+                    }
+                };
+                var response = await FirebaseMessaging.DefaultInstance.SendMulticastAsync(message);
+            }catch(Exception e)
+            {
+                
+            }
             return true;
         }
         public async Task<bool> RemoveNotification(int id)
