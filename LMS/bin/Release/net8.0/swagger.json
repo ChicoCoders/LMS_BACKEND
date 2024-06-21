@@ -36,11 +36,18 @@
         "tags": [
           "Auth"
         ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
         "parameters": [
           {
-            "in": "query",
-            "name": "userType",
-            "type": "string"
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UserType"
+            }
           }
         ],
         "responses": {
@@ -50,22 +57,24 @@
         }
       }
     },
-    "/api/Auth/user": {
-      "get": {
-        "tags": [
-          "Auth"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/Auth/Logout": {
+    "/api/Auth/refresh": {
       "post": {
         "tags": [
           "Auth"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/TokenRequest"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -79,37 +88,21 @@
         "tags": [
           "Auto"
         ],
-        "produces": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
         "responses": {
           "200": {
-            "description": "Success",
-            "schema": {
-              "type": "string"
-            }
+            "description": "Success"
           }
         }
       }
     },
-    "/api/Dashboard/getAdminDashboradData": {
+    "/api/Dashboard/getDashboradData": {
       "post": {
         "tags": [
           "Dashboard"
         ],
-        "produces": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
         "responses": {
           "200": {
-            "description": "Success",
-            "schema": {
-              "$ref": "#/definitions/DashboardStatics"
-            }
+            "description": "Success"
           }
         }
       }
@@ -119,20 +112,9 @@
         "tags": [
           "Dashboard"
         ],
-        "produces": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
         "responses": {
           "200": {
-            "description": "Success",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/ReservationDto"
-              }
-            }
+            "description": "Success"
           }
         }
       }
@@ -156,6 +138,41 @@
                 "$ref": "#/definitions/LastWeekReservations"
               }
             }
+          }
+        }
+      }
+    },
+    "/api/Dashboard/getLastWeekUsers": {
+      "post": {
+        "tags": [
+          "Dashboard"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/LastWeekReservations"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Dashboard/getAnouncement": {
+      "post": {
+        "tags": [
+          "Dashboard"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
           }
         }
       }
@@ -1225,9 +1242,14 @@
       }
     },
     "/api/User/forgetPassword": {
-      "get": {
+      "post": {
         "tags": [
           "User"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
         ],
         "produces": [
           "text/plain",
@@ -1236,9 +1258,11 @@
         ],
         "parameters": [
           {
-            "in": "query",
-            "name": "email",
-            "type": "string"
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/email"
+            }
           }
         ],
         "responses": {
@@ -1545,43 +1569,6 @@
         },
         "name": {
           "type": "string"
-        }
-      }
-    },
-    "DashboardStatics": {
-      "type": "object",
-      "properties": {
-        "total": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "returnToday": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "issueToday": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "locations": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "users": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "reservations": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "requests": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "overDue": {
-          "format": "int32",
-          "type": "integer"
         }
       }
     },
@@ -1946,36 +1933,6 @@
         }
       }
     },
-    "ReservationDto": {
-      "type": "object",
-      "properties": {
-        "reservationNo": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "resource": {
-          "type": "string"
-        },
-        "userName": {
-          "type": "string"
-        },
-        "userId": {
-          "type": "string"
-        },
-        "borrowerName": {
-          "type": "string"
-        },
-        "issueDate": {
-          "$ref": "#/definitions/DateOnly"
-        },
-        "dueDate": {
-          "$ref": "#/definitions/DateOnly"
-        },
-        "status": {
-          "type": "string"
-        }
-      }
-    },
     "Resource": {
       "type": "object",
       "properties": {
@@ -2197,6 +2154,17 @@
         }
       }
     },
+    "TokenRequest": {
+      "type": "object",
+      "properties": {
+        "accessToken": {
+          "type": "string"
+        },
+        "refreshToken": {
+          "type": "string"
+        }
+      }
+    },
     "User": {
       "required": [
         "addedBy",
@@ -2308,6 +2276,14 @@
         }
       }
     },
+    "UserType": {
+      "type": "object",
+      "properties": {
+        "userType": {
+          "type": "string"
+        }
+      }
+    },
     "WeatherForecast": {
       "type": "object",
       "properties": {
@@ -2324,6 +2300,14 @@
           "readOnly": true
         },
         "summary": {
+          "type": "string"
+        }
+      }
+    },
+    "email": {
+      "type": "object",
+      "properties": {
+        "emailaddress": {
           "type": "string"
         }
       }

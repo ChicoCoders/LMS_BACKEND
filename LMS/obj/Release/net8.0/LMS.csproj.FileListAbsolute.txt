@@ -173,3 +173,5 @@ C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\L
 C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\bin\Release\net8.0\Google.Apis.Core.dll
 C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\bin\Release\net8.0\System.Management.dll
 C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\bin\Release\net8.0\runtimes\win\lib\net7.0\System.Management.dll
+C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\obj\Release\net8.0\LMS.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\obj\Release\net8.0\LMS.MvcApplicationPartsAssemblyInfo.cache

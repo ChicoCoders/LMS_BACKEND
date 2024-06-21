@@ -31,8 +31,12 @@ namespace LMS.Models
         public string UserType {  get; set; }
         [Required]
         public string AddedById { get; set; }
+    
+
         [Required]
         public User AddedBy { get; set; }
+
+
 
         public DateOnly AddedDate { get; set; }
 

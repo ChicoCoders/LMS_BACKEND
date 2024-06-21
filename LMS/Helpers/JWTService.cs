@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Text;
 
 namespace LMS.Helpers
@@ -9,7 +10,7 @@ namespace LMS.Helpers
     {
         private string secureKey = "this is a very secure key for me";
         private string secureKeyForgetPassword = "this is a very secure key for me reset password";
-        public string Generate(string username,string role)
+        public string Generate(string username, string role)
         {
             var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secureKey));
             var credentials = new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha256Signature);
@@ -26,7 +27,7 @@ namespace LMS.Helpers
                 audience: null,
                 claims: claims,
                 notBefore: DateTime.UtcNow,
-                expires: DateTime.UtcNow.AddDays(1));
+                expires: DateTime.UtcNow.AddMinutes(1));
             var securityToken = new JwtSecurityToken(header, payload);
 
             
@@ -122,5 +123,39 @@ namespace LMS.Helpers
             var userIdClaim = VerifyResetPasswordToken(token);
             return userIdClaim.Claims.ToList().FirstOrDefault(e => e.Type == "username").Value;
         }
+
+        public JwtSecurityToken GetPrincipalFromExpiredToken(string jwt)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes(secureKey);
+
+            var tokenValidationParameters = new TokenValidationParameters
+            {
+                // Specify the key used to sign the token
+                IssuerSigningKey = new SymmetricSecurityKey(key),
+
+                // These should be set according to your token's validation requirements
+                ValidateIssuerSigningKey = true, // Validate the signing key
+                ValidateIssuer = false, // Do not validate the issuer
+                ValidateAudience = false, // Do not validate the audience
+                ValidateLifetime = false // Allow expired tokens to be validated
+            };
+
+            // Validate the token and get the ClaimsPrincipal
+            tokenHandler.ValidateToken(jwt, tokenValidationParameters, out SecurityToken validatedToken);
+
+            // Ensure the validated token is a JwtSecurityToken
+            var jwtSecurityToken = validatedToken as JwtSecurityToken;
+            if (jwtSecurityToken == null)
+            {
+                throw new SecurityTokenException("Invalid token");
+            }
+
+            // Return the ClaimsPrincipal which should contain all claims from the token
+            return (JwtSecurityToken)validatedToken;
+        }
+
+
     }
+
 }

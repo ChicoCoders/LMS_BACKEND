@@ -1,14 +1,11 @@
-﻿using LMS.DTOs;
+﻿
+using LMS.DTOs;
 using LMS.Helpers;
 using LMS.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
-using Microsoft.EntityFrameworkCore;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Pqc.Crypto.Lms;
-using System.Runtime.Intrinsics.Arm;
+
 
 namespace LMS.Controllers
 {
@@ -16,126 +13,69 @@ namespace LMS.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly DataContext _Context;
-        private readonly JWTService _jwtService;
-        private readonly IUserService _userService;
+        private readonly IAuthService _authService;
         
-        public AuthController(DataContext context, JWTService jwt, IUserService userService)
+        public AuthController(IAuthService authService )
         {
-            _Context = context;
-            _jwtService = jwt;
-            _userService = userService;
+           _authService = authService;
         }
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] AuthDto request )
         {
-            var user = await _Context.Users.FirstOrDefaultAsync(u => u.UserName == request.userName);
+           return await _authService.Login(request);
+        }
 
-            if (user==null)
-            {
-                return BadRequest("User not found");
-            }
-           if (!(BCrypt.Net.BCrypt.Verify( request.password, user.Password)))
-          //if(request.password==user.Password)
-                if(request.password != user.Password)
-            {
-                return BadRequest("Wrong Password");
-
-            }
-            var k = new AuthDto
-            {
-                userName = user.UserName,
-                password = user.Password,
-            };
-            var jwt = _jwtService.Generate(user.UserName,user.UserType);
-            Response.Cookies.Delete("jwt");
-            var cookie = new CookieOptions
-            {
-                HttpOnly = false,
-                Expires = DateTime.Now.AddHours(3),
-            };
-            Response.Cookies.Append("jwt", jwt, cookie);
-
-            return Ok(new{
-                token = jwt,
-                message ="success",
-            });
+        public class UserType
+        {
+            public string userType { get; set;}
         }
 
         [HttpPost("selectusertype")]
-        public async Task<IActionResult> SelectUserType(string userType)
+        public async Task<IActionResult> SelectUserType([FromBody] UserType userType)
         {
-            var userName = _jwtService.GetUsername(HttpContext);
-            var user = await _Context.Users.FirstOrDefaultAsync(e => e.UserName == userName);
-            var jwt = "";
-
-            if (user == null)
-            {
-                return BadRequest("User not found");
-            }
-            if (userType=="admin")
-            {
-                jwt = _jwtService.Generate(user.UserName, user.UserType);
-                Response.Cookies.Append("jwt", jwt, new CookieOptions
-                {
-                    HttpOnly = false,
-                    SameSite = SameSiteMode.None,
-                    Secure = true,
-                    Expires = DateTime.Now.AddHours(3),
-                }
-               );
-            }
-            if(userType =="patron")
-            {
-                jwt = _jwtService.Generate(user.UserName, "patron");
-                Response.Cookies.Append("jwt", jwt, new CookieOptions
-                {
-                    HttpOnly = false,
-                    SameSite = SameSiteMode.None,
-                    Secure = true,
-                    Expires = DateTime.Now.AddHours(3),
-
-                }
-               );
-            }
-               
-
-            return Ok(new
-            {
-                token=jwt,
-                message = "success",
-            });
+           return await _authService.SelectUserType(userType.userType,HttpContext);  
         }
 
-        [HttpGet("user")]
-        public async Task<IActionResult> User()
-        {
-            try { 
-            var jwt = Request.Cookies["jwt"];
-            var token = _jwtService.Verify(jwt);
-            string userName = token.Issuer;
-            var user = _userService.GetById(userName);
+      //  [HttpGet("user")]
+        //public async Task<IActionResult> User()
+        //{
+          //  try { 
+            //var jwt = Request.Cookies["jwt"];
+           // var token = _jwtService.Verify(jwt);
+            //string userName = token.Issuer;
+           // var user = _userService.GetById(userName);
 
-            return Ok(user);
-            }
-            catch (Exception ex)
-            {
-                return Unauthorized();
-            }
+            //return Ok(user);
+           // }
+            //catch (Exception ex)
+            //{
+              //  return Unauthorized();
+            //}
+        //}
+
+        //[HttpPost("Logout")]
+       // public async Task<IActionResult> LogOut()
+        //{
+           // Response.Cookies.Delete("jwt");
+         //   return Ok(
+             //   new
+               // {
+                 //   message = "logout"
+                //}/
+          //  );
+        //}
+
+      
+
+        [HttpPost("refresh")]
+        public async Task<IActionResult> Refresh([FromBody] TokenRequest tokenRequest)
+        {
+            return await _authService.Refresh(tokenRequest);
         }
 
-        [HttpPost("Logout")]
-        public async Task<IActionResult> LogOut()
-        {
-            Response.Cookies.Delete("jwt");
-            return Ok(
-                new
-                {
-                    message = "logout"
-                }
-            );
-        }
+
+
 
     }
 }

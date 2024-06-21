@@ -22,7 +22,7 @@ namespace LMS.Data
         public DbSet<Author> Author { get; set; }
         public DbSet<NotificationUser> NotificationUser { get; set; }
         public DbSet<FirebaseConnection> FirebaseConnections { get; set; }
-        
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

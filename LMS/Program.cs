@@ -29,7 +29,9 @@ builder.Services.AddScoped<IReportService, ReportService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IDashboardService,DashboardService>();
 builder.Services.AddScoped<ILocationService, LocationService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<JWTService>();
+builder.Services.AddScoped<RefreshTokenService>();
 
 
 builder.Services.AddAuthentication(options =>

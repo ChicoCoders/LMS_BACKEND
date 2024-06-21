@@ -160,3 +160,5 @@ C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\L
 C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\obj\Release\net8.0\linux-x64\LMS.pdb
 C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\obj\Release\net8.0\linux-x64\LMS.genruntimeconfig.cache
 C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\obj\Release\net8.0\linux-x64\ref\LMS.dll
+C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\obj\Release\net8.0\linux-x64\LMS.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\obj\Release\net8.0\linux-x64\LMS.MvcApplicationPartsAssemblyInfo.cache
