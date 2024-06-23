@@ -33,8 +33,31 @@ namespace LMS.Helpers
             
 
             return new JwtSecurityTokenHandler().WriteToken(securityToken);
-        } 
+        }
+        public string GenerateMobileJwt(string username, string role)
+        {
+            var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secureKey));
+            var credentials = new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha256Signature);
 
+            var claims = new[]
+           {
+                new System.Security.Claims.Claim("username", username),
+                new System.Security.Claims.Claim("role", role) // Add user role to claims
+            };
+
+            var header = new JwtHeader(credentials);
+            var payload = new JwtPayload(
+                issuer: null,
+                audience: null,
+                claims: claims,
+                notBefore: DateTime.UtcNow,
+                expires: DateTime.UtcNow.AddDays(90));
+            var securityToken = new JwtSecurityToken(header, payload);
+
+
+
+            return new JwtSecurityTokenHandler().WriteToken(securityToken);
+        }
         public JwtSecurityToken Verify(string jwt)
         {
             var tokenHandler=new JwtSecurityTokenHandler();

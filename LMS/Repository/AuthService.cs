@@ -63,6 +63,37 @@ namespace LMS.Repository
             });
         }
 
+        public async Task<IActionResult> MobileLogin([FromBody] AuthDto request)
+        {
+            var user = await _Context.Users.FirstOrDefaultAsync(u => u.UserName == request.userName);
+
+            if (user == null)
+            {
+                return new BadRequestObjectResult("User not found");
+            }
+            if (!(BCrypt.Net.BCrypt.Verify(request.password, user.Password)))
+                //if (request.password == user.Password)
+                if (request.password != user.Password)
+                {
+                    return new BadRequestObjectResult("Wrong Password");
+
+                }
+            var k = new AuthDto
+            {
+                userName = user.UserName,
+                password = user.Password,
+            };
+            var jwt = _jwtService.GenerateMobileJwt(user.UserName, user.UserType);
+           
+            
+            return new OkObjectResult(new
+            {
+                accessToken = jwt,
+                message = "success",
+            });
+        }
+    
+
         public async Task<IActionResult> SelectUserType(string userType,HttpContext httpContext)
         {
             var userName = _jwtService.GetUsername(httpContext);

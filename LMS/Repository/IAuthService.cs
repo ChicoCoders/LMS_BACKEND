@@ -8,7 +8,7 @@ namespace LMS.Repository
 
         Task<IActionResult> Login(AuthDto request);
         Task<IActionResult> Refresh(TokenRequest tokenRequest);
-
+        Task<IActionResult> MobileLogin([FromBody] AuthDto request);
         Task<IActionResult> SelectUserType(string userType, HttpContext httpContext);
 
     }

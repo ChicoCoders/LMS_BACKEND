@@ -26,6 +26,12 @@ namespace LMS.Controllers
            return await _authService.Login(request);
         }
 
+        [HttpPost("mobilelogin")]
+        public async  Task<IActionResult> MobileLogin([FromBody] AuthDto request)
+        {
+           return await _authService.MobileLogin(request);
+        }
+       
         public class UserType
         {
             public string userType { get; set;}
