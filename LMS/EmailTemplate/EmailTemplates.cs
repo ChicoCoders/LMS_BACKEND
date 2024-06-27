@@ -108,7 +108,7 @@ namespace LMS.EmailTemplates
                                     <img src={Book.ImageURL} alt=""Book Image"" style=""width:140px;height:200px;"">
                                 </div>
                             </div>
-                            <a href=""https://easylibro.online"" ><div class=""visit-btn"">Go to Web App</div></a>
+                            <a href=""https://easylibro.online"" ><div class=""visit-btn"">Go to Easylibro</div></a>
                         </div>
                     </div>
                 </body>
@@ -116,7 +116,6 @@ namespace LMS.EmailTemplates
             };
             return htmlBody;
         }
-
         public TextPart ReturnBookEmail(Reservation reservation, string userName, Resource Book)
         {
             var htmlBody = new TextPart(TextFormat.Html)
@@ -217,7 +216,7 @@ namespace LMS.EmailTemplates
                             <img src=""{Book.ImageURL}"" alt=""Book Image"" style=""width:140px;height:200px;"">
                         </div>
                     </div>
-                    <a href=""https://easylibro.online"" ><div class=""visit-btn"">Go to Web App</div></a>
+                    <a href=""https://easylibro.online"" ><div class=""visit-btn"">Go to Easylibro</div></a>
                 </div>
             </div>
         </body>
@@ -225,8 +224,6 @@ namespace LMS.EmailTemplates
             };
             return htmlBody;
         }
-
-
         public TextPart DefaultPassword(string password)
         {
             var htmlBody = new TextPart(TextFormat.Html)
@@ -288,7 +285,7 @@ namespace LMS.EmailTemplates
 
                             <p>Please make sure to change your password after logging in for the first time to ensure the security of your account.</p>
 
-                            <p>If you have any questions or need assistance, feel free to contact our support team at <a href=""""mailto:support@example.com"""">support@example.com</a>.</p>
+                            <p>If you have any questions or need assistance, feel free to contact our support team at <a href=""""mailto:easylibro@gmail.com"""">easylibro@gmail.com</a>.</p>
 
                             <footer>
                               Best regards,<br>
@@ -305,7 +302,6 @@ namespace LMS.EmailTemplates
 
             return htmlBody;
         }
-
         public TextPart ResetPassword(string link)
         {
             var htmlBody = new TextPart(TextFormat.Html)
@@ -367,7 +363,7 @@ namespace LMS.EmailTemplates
 
                             <p>Please make sure to change your password after logging in for the first time to ensure the security of your account.</p>
 
-                            <p>If you have any questions or need assistance, feel free to contact our support team at <a href=""""mailto:easylibro.online"""">support@example.com</a>.</p>
+                            <p>If you have any questions or need assistance, feel free to contact our support team at <a href=""""mailto:easylibro@gmail.com"""">easylibro@gmail.com</a>.</p>
 
                             <footer>
                               Best regards,<br>
@@ -446,7 +442,7 @@ namespace LMS.EmailTemplates
 
                                     <p>Please return the book as soon as possible to avoid any fines.</p>
 
-                                    <p>If you have any questions or need assistance, feel free to contact our support team at <a href=""mailto:support@example.com"">support@example.com</a>.</p>
+                                    <p>If you have any questions or need assistance, feel free to contact our support team at <a href=""mailto:easylibro@gmail.com"">easylibro@gmail.com</a>.</p>
 
                                     <footer>
                                         Best regards,<br>

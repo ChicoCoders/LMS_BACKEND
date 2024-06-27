@@ -27,7 +27,7 @@ namespace LMS.Helpers
                 audience: null,
                 claims: claims,
                 notBefore: DateTime.UtcNow,
-                expires: DateTime.UtcNow.AddMinutes(1));
+                expires: DateTime.UtcNow.AddMinutes(15));
             var securityToken = new JwtSecurityToken(header, payload);
 
             

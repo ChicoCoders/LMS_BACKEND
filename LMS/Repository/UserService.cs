@@ -76,7 +76,9 @@ namespace LMS.Repository
                     UserType = userdto.UserType,
                     AddedById = addedby,
                     Status = "free",
-                    AddedDate = DateOnly.FromDateTime(DateTime.Now)
+                    AddedDate = DateOnly.FromDateTime(DateTime.Now),
+                    Gender=userdto.Gender,
+                    Image=null
                 };
 
                 //Add user object to _Context
@@ -146,7 +148,9 @@ namespace LMS.Repository
                     Address = user.Address,
                     Status = user.Status,
                     nic = user.NIC,
-                    reservationcount = count
+                    reservationcount = count,
+                    Gender=user.Gender,
+                    Image=user.Image
                 };
 
                 return aboutuser;
@@ -160,14 +164,11 @@ namespace LMS.Repository
             var user = await _Context.Users.FirstOrDefaultAsync(e => e.UserName == username);
             if (user != null) {
                 user.FName = edituser.FName;
-
                 user.LName = edituser.LName;
-
                 user.PhoneNumber = edituser.PhoneNumber;
-
                 user.Address = edituser.Address;
                 user.NIC = edituser.NIC;
-
+                user.Gender = edituser.Gender;
                 user.DOB = DateOnly.Parse(edituser.DOB);
                 await _Context.SaveChangesAsync();
                 return true;
@@ -177,7 +178,21 @@ namespace LMS.Repository
                 throw new Exception("User not found");
             }
         }
-
+        public async Task<bool> EditProfilePicture(HttpContext httpContext,string image)
+        {
+            var userName=_jwt.GetUsername(httpContext);
+            var user = await _Context.Users.FirstOrDefaultAsync(e => e.UserName == userName);
+            if(user!=null)
+            {
+                user.Image = image;
+                await _Context.SaveChangesAsync();
+                return true;
+            }
+            else
+            {
+                throw new Exception("User not found");
+            }
+        } 
         public async Task<List<UserListDto>> SearchUser(SearchUserDto searchUser)
         {
             var k = new List<User>();
@@ -221,7 +236,8 @@ namespace LMS.Repository
                     username = x.UserName,
                     Name = x.FName + " " + x.LName,
                     Email = x.Email,
-                    Role = x.UserType
+                    Role = x.UserType,
+                    Image=x.Image
                 };
                 userlist.Add(user);
             }
@@ -301,6 +317,8 @@ namespace LMS.Repository
                     nic = user.NIC,
                     Address = user.Address,
                     Status = user.Status,
+                    Gender=user.Gender,
+                    Image=user.Image
                 };
 
                 return aboutuser;
@@ -369,6 +387,34 @@ namespace LMS.Repository
             }
         }
 
-
+        public async Task<bool> AddAdmin()
+        {
+            try
+            {
+                var user = new User
+                {
+                    UserName = "admin",
+                    FName = "admin",
+                    LName = "admin",
+                    Email = "kavidil20010331@gmail.com",
+                    DOB = DateOnly.Parse("2001-03-31"),
+                    Address = "admin",
+                    PhoneNumber = "admin",
+                    Password = BCrypt.Net.BCrypt.HashPassword("123456"),
+                    NIC = "admin",
+                    UserType = "admin",
+                    AddedById = "admin",
+                    Status = "free",
+                    AddedDate = DateOnly.FromDateTime(DateTime.Now),
+                    Gender="male"
+                };
+                await _Context.Users.AddAsync(user);
+                await _Context.SaveChangesAsync();
+                return true;
+            }catch(Exception ex)
+            {
+                throw new Exception("Admin Already Exists");
+            }
+        }
     }
 }

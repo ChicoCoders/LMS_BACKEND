@@ -12,7 +12,7 @@ namespace LMS.Repository
         Task<bool> DeleteUser(string username);
         Task<AboutUserDto> AboutUser(string username);
         Task<bool> EditUser(EditUserRequestDto edituser, HttpContext httpContext);
-
+        Task<bool> EditProfilePicture(HttpContext httpContext, string image);
         Task<List<UserListDto>> SearchUser(SearchUserDto searchUser);
 
         Task<bool> ChangePassword( ChangePasswordDto request,HttpContext httpContext);
@@ -23,5 +23,6 @@ namespace LMS.Repository
         Task<bool> ChangeEmail(string newEmail, HttpContext httpContext);
         Task<bool> SendForgotPasswordEmail(string email);
         Task<bool> ResetPassword(ChangePasswordDto request, HttpContext httpContext);
+        Task<bool> AddAdmin();
     }
 }

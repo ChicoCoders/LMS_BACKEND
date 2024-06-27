@@ -13,7 +13,8 @@
         public string Address { get; set; }
         public string Status { get; set; }
         public string nic { get; set; }
-        
+        public string Image { get; set; }
+        public string Gender { get; set; }
         public int reservationcount { get; set; }
 
     }

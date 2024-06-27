@@ -2,6 +2,7 @@
 using LMS.Helpers;
 using LMS.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
 using System.Diagnostics.Metrics;
 using static Microsoft.Extensions.Logging.EventSource.LoggingEventSource;
 
@@ -26,7 +27,7 @@ namespace LMS.Repository
         {
             var addedby = _jWTService.GetUsername(httpContext);
             var resource = await _Context.Resources.FirstOrDefaultAsync(u => u.ISBN == book.ISBN); 
-
+            
             if (resource == null)// Check resource already in DB
             {
                 if (await _Context.Author.FirstOrDefaultAsync(u => u.AuthorName == book.Author) == null) //Check is he new author
@@ -38,7 +39,9 @@ namespace LMS.Repository
                     _Context.Author.Add(auth);   //Add the Author
                     await _Context.SaveChangesAsync();
                 }
-                
+
+                var a = new Resource();
+
 
                 var reso = new Resource //Make Resource
                 {
@@ -48,7 +51,7 @@ namespace LMS.Repository
                     Type = book.Type,
                     Quantity = book.Quantity,
                     Borrowed = 0,
-                   //year=book.Year,
+                    Year=book.Year,
                     Description = book.Description,
                     Price = book.Price,
                     PageCount = book.Pages,
@@ -141,7 +144,8 @@ namespace LMS.Repository
                     dateadded=x.AddedOn,
                     noOfRes=count,
                     author = x.AuthorName,
-                    location = x.BookLocation
+                    location = x.BookLocation,
+                    year=x.Year
                 };
 
                 reso.Add(y);
@@ -174,6 +178,8 @@ namespace LMS.Repository
                     resource.ImageURL = book.ImagePath;
 
                     resource.Description = book.Description;
+
+                    resource.Year=book.Year;
 
                
                     var author = await _Context.Author.FirstOrDefaultAsync(u => u.AuthorName == book.Author);
@@ -217,6 +223,7 @@ namespace LMS.Repository
                         total=resource.Quantity+resource.Borrowed,
                         CupboardId=cupboard.cupboardID.ToString(), 
                         CupboardName=cupboard.name,
+                        year=resource.Year,
                         ShelfId=location.ShelfNo.ToString(),
                         Description=resource.Description,
                         pages=resource.PageCount,

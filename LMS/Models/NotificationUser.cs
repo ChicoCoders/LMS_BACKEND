@@ -8,7 +8,7 @@ namespace LMS.Models
         [Key]
         public int Id { get; set; }
         [ForeignKey(nameof(User))]
-        public string UserName { get; set; }
+        public string? UserName { get; set; }
 
         [ForeignKey(nameof(Notifications))]
         public int NotificationId { get; set; }

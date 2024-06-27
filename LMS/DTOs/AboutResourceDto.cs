@@ -17,6 +17,7 @@ namespace LMS.DTOs
         public string ShelfId { get; set; }
         public string Description { get; set; }
         public int pages {  get; set; }
+        public int year { get; set; }
         public double price { get; set; }
         public DateTime addedon {  get; set; }
 

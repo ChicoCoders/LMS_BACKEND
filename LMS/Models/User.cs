@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Drawing;
 using System.Runtime.CompilerServices;
 
 namespace LMS.Models
@@ -25,28 +26,27 @@ namespace LMS.Models
         public string Password { get; set; }
         [Required]
         public string NIC {  get; set; }
+
+        public string Gender { get; set; }
         public string Status {  get; set; }
+        public string? Image { get; set; }
 
         [Required]
         public string UserType {  get; set; }
-        [Required]
-        public string AddedById { get; set; }
+        public string? AddedById { get; set; }
     
 
-        [Required]
-        public User AddedBy { get; set; }
+        public virtual User AddedBy { get; set; }
 
+        public virtual DateOnly AddedDate { get; set; }
 
+        public virtual List<Reservation> Reservations { get; set; }
 
-        public DateOnly AddedDate { get; set; }
+        public virtual List<RequestResource> requests { get; set; }
 
-        public List<Reservation> Reservations { get; set; }
-
-        public List<RequestResource> requests { get; set; }
-
-        public List<NotificationUser> NotificationUser { get; set;}
+        public virtual List<NotificationUser> NotificationUser { get; set;}
         
-        public List<FirebaseConnection> FirebaseConnections { get; set; }
+        public virtual List<FirebaseConnection> FirebaseConnections { get; set; }
     }
 
     

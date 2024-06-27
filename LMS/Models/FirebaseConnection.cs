@@ -8,8 +8,8 @@ namespace LMS.Models
         [Key]
         public int Id { get; set; }
         [ForeignKey(nameof(User))]
-        public string userName { get; set; }
+        public string? userName { get; set; }
         public string Token { get; set; }
-        public User User { get; set; }
+        public virtual User User { get; set; }
     }
 }

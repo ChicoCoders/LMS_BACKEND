@@ -105,6 +105,10 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
@@ -112,6 +116,22 @@
             "Ngrok.AspNetCore": {
               "target": "Package",
               "version": "[1.0.6, )"
+            },
+            "Quartz": {
+              "target": "Package",
+              "version": "[3.9.0, )"
+            },
+            "Quartz.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[3.9.0, )"
+            },
+            "Quartz.Jobs": {
+              "target": "Package",
+              "version": "[3.9.0, )"
+            },
+            "Quartz.Serialization.Json": {
+              "target": "Package",
+              "version": "[3.9.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

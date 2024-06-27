@@ -13,5 +13,6 @@ namespace LMS.Repository
         Task<IActionResult> deleteReservation(int id);
         Task<IActionResult> extendDue(int id,string due);
         Task setOverdue();
+        Task addPenalty();
     }
 }

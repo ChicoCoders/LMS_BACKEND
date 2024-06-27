@@ -62,7 +62,6 @@ namespace LMS.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("userName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -106,7 +105,6 @@ namespace LMS.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -217,28 +215,28 @@ namespace LMS.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("BorrowerID")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateOnly>("DueDate")
                         .HasColumnType("date");
 
                     b.Property<string>("IssuedByID")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateOnly>("IssuedDate")
                         .HasColumnType("date");
+
+                    b.Property<int>("Penalty")
+                        .HasColumnType("int");
 
                     b.Property<string>("ReservationNo")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ResourceId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<DateOnly>("ReturnDate")
+                    b.Property<DateOnly?>("ReturnDate")
                         .HasColumnType("date");
 
                     b.Property<string>("Status")
@@ -304,6 +302,9 @@ namespace LMS.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
+
                     b.HasKey("ISBN");
 
                     b.HasIndex("AddedByID");
@@ -321,7 +322,6 @@ namespace LMS.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("AddedById")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateOnly>("AddedDate")
@@ -340,6 +340,13 @@ namespace LMS.Migrations
 
                     b.Property<string>("FName")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Gender")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LName")
@@ -377,9 +384,7 @@ namespace LMS.Migrations
                 {
                     b.HasOne("LMS.Models.User", "User")
                         .WithMany("FirebaseConnections")
-                        .HasForeignKey("userName")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .HasForeignKey("userName");
 
                     b.Navigation("User");
                 });
@@ -389,7 +394,7 @@ namespace LMS.Migrations
                     b.HasOne("LMS.Models.Cupboard", "cupboard")
                         .WithMany()
                         .HasForeignKey("CupboardId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.SetNull)
                         .IsRequired();
 
                     b.Navigation("cupboard");
@@ -400,14 +405,12 @@ namespace LMS.Migrations
                     b.HasOne("LMS.Models.Notifications", "Notifications")
                         .WithMany("NotificationUser")
                         .HasForeignKey("NotificationId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.SetNull)
                         .IsRequired();
 
                     b.HasOne("LMS.Models.User", "User")
                         .WithMany("NotificationUser")
-                        .HasForeignKey("UserName")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .HasForeignKey("UserName");
 
                     b.Navigation("Notifications");
 
@@ -419,13 +422,13 @@ namespace LMS.Migrations
                     b.HasOne("LMS.Models.Resource", "Resource")
                         .WithMany()
                         .HasForeignKey("ResourceId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.SetNull)
                         .IsRequired();
 
                     b.HasOne("LMS.Models.User", "User")
                         .WithMany("requests")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.SetNull)
                         .IsRequired();
 
                     b.Navigation("Resource");
@@ -437,21 +440,15 @@ namespace LMS.Migrations
                 {
                     b.HasOne("LMS.Models.User", "Borrower")
                         .WithMany("Reservations")
-                        .HasForeignKey("BorrowerID")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .HasForeignKey("BorrowerID");
 
                     b.HasOne("LMS.Models.User", "IssuedBy")
                         .WithMany()
-                        .HasForeignKey("IssuedByID")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .HasForeignKey("IssuedByID");
 
                     b.HasOne("LMS.Models.Resource", "Resource")
                         .WithMany()
-                        .HasForeignKey("ResourceId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .HasForeignKey("ResourceId");
 
                     b.Navigation("Borrower");
 
@@ -465,19 +462,19 @@ namespace LMS.Migrations
                     b.HasOne("LMS.Models.User", "AddedBy")
                         .WithMany()
                         .HasForeignKey("AddedByID")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.SetNull)
                         .IsRequired();
 
                     b.HasOne("LMS.Models.Author", "Author")
                         .WithMany("Resources")
                         .HasForeignKey("AuthorName")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.SetNull)
                         .IsRequired();
 
                     b.HasOne("LMS.Models.Location", "Location")
                         .WithMany("resources")
                         .HasForeignKey("BookLocation")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.SetNull)
                         .IsRequired();
 
                     b.Navigation("AddedBy");
@@ -491,9 +488,7 @@ namespace LMS.Migrations
                 {
                     b.HasOne("LMS.Models.User", "AddedBy")
                         .WithMany()
-                        .HasForeignKey("AddedById")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .HasForeignKey("AddedById");
 
                     b.Navigation("AddedBy");
                 });

@@ -6,6 +6,8 @@ namespace LMS.Models
     {
         [Key]
         public string AuthorName {  get; set; }
-        public List<Resource> Resources { get; set; }    
+        public List<Resource> Resources { get; set; }
+        
+
     }
 }

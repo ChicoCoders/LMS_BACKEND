@@ -648,3 +648,8 @@ C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\L
 C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\bin\Debug\net8.0\serviceAccountKey.json
 C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\obj\Debug\net8.0\LMS.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\obj\Debug\net8.0\LMS.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\bin\Debug\net8.0\Quartz.dll
+C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\bin\Debug\net8.0\Quartz.Extensions.DependencyInjection.dll
+C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\bin\Debug\net8.0\Quartz.Extensions.Hosting.dll
+C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\bin\Debug\net8.0\Quartz.Jobs.dll
+C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\bin\Debug\net8.0\Quartz.Serialization.Json.dll

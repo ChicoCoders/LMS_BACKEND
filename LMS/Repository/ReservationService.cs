@@ -82,7 +82,7 @@ namespace LMS.Repository
                     IssuedByID = issuer,
                     IssuedDate = DateOnly.FromDateTime(DateTime.Today),
                     DueDate = DateOnly.Parse(request.dueDate),
-                    
+                    Penalty=0,
                     
                 };
 
@@ -146,12 +146,15 @@ namespace LMS.Repository
                     ISBN = reservation.ResourceId,
                     BookTitle = resource.Title,
                     UserName = reservation.BorrowerID,
-                    DateIssue = reservation.IssuedDate,
+                    
+                    DateIssue = DateOnly.FromDateTime(DateTime.Now),
                     DueDate = reservation.DueDate,
                     Issuer = reservation.IssuedByID,
                     ReturnDate = reservation.ReturnDate,
                     Status = reservation.Status,
-                    ImagePath = resource.ImageURL
+                    ImagePath = resource.ImageURL,
+                    Penalty=reservation.Penalty
+                    
 
     };
                 return new OkObjectResult(reservationdto);
@@ -175,9 +178,9 @@ namespace LMS.Repository
                     borrower.Status = "free";
                     resource.Quantity = resource.Quantity + 1;
                     resource.Borrowed = resource.Borrowed - 1;
-                    reservation.Status = "reserved";
+                    reservation.Status = "received";
                     reservation.ReturnDate = DateOnly.Parse(request.returnDate);
-                   
+                    reservation.Penalty = reservation.Penalty + request.Penalty;
                     await _Context.SaveChangesAsync();
                    
 
@@ -349,6 +352,18 @@ namespace LMS.Repository
             Console.WriteLine("Recurring job scheduled to set overdue reservations.");
         }
 
+        public async Task addPenalty()
+        {
+            var overduelist=await _Context.Reservations.Where(e => e.Status == "overdue").ToListAsync();
+            
+            foreach(var x in overduelist)
+            {
+                var penalty = DateOnly.FromDateTime(DateTime.Now).DayNumber - x.DueDate.DayNumber; // x.DueDate should be of type DateOnly
+                x.Penalty = penalty;
+            }
+
+            await _Context.SaveChangesAsync();
+        }
 
     }
 }

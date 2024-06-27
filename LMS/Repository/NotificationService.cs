@@ -62,8 +62,6 @@ namespace LMS.Repository
         public async Task<bool> NewNotice(NoticeDto newnotice)
         {
 
-           
-
             var notice = new Notifications
             {
                 Title=newnotice.Subject,
@@ -165,7 +163,6 @@ namespace LMS.Repository
         }
         public async Task<List<NewNoticeDto>> GetNotification()
         {
-
             var notificationlist = new List<NewNoticeDto>();
             var notifications = await _Context.Notifications.ToListAsync();
 
@@ -211,6 +208,41 @@ namespace LMS.Repository
             return mynotifications;
 
         }
+        public async Task<bool> RemoveNotification(int id)
+        {
+            var notification = await _Context.Notifications.FirstOrDefaultAsync(e => e.Id == id);
+            if (notification != null)
+            {
+                _Context.NotificationUser.RemoveRange(_Context.NotificationUser.Where(e => e.NotificationId == id));
+                _Context.Notifications.Remove(notification);
+                await _Context.SaveChangesAsync();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public async Task<bool> MarkAsRead(int id)
+        {
+            var notification = await _Context.NotificationUser.FirstOrDefaultAsync(e => e.Id == id);
+            if (notification != null)
+            {
+                notification.Status = "read";
+                await _Context.SaveChangesAsync();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public async Task<int> UnreadCount(HttpContext httpContext)
+        {
+            var user = _jwtService.GetUsername(httpContext);
+            var count = await _Context.NotificationUser.CountAsync(e => e.UserName == user && e.Status == "unread");
+            return count;
+        }
         public async Task<bool> SetRemind(Reservation reservation)
         {
             var Description = "The book " + reservation.ResourceId + " is overdue! Please return it by " + reservation.DueDate + " to avoid any fines.";
@@ -219,9 +251,9 @@ namespace LMS.Repository
                 Title = "Reservation Reminder",
                 Description = Description,
                 ToUser = reservation.BorrowerID,
-                Date = DateOnly.FromDateTime(DateTime.Now), 
+                Date = DateOnly.FromDateTime(DateTime.Now),
                 time = TimeOnly.FromDateTime(DateTime.Now),
-                Type="remind"
+                Type = "remind"
             };
             await _Context.Notifications.AddAsync(newNotification);
             await _Context.SaveChangesAsync();
@@ -250,15 +282,15 @@ namespace LMS.Repository
                 }
                 catch (Exception e)
                 {
-                    
+
                 }
             }
-           
+
 
             var borrower = await _Context.Users.FirstOrDefaultAsync(e => e.UserName == reservation.BorrowerID);
             var htmlBody = new EmailTemplate().RemindEmail(reservation);
-            await _emailService.SendEmail(htmlBody, borrower.Email, "Your Reservation is Overdue" );
-            
+            await _emailService.SendEmail(htmlBody, borrower.Email, "Your Reservation is Overdue");
+
             await _Context.NotificationUser.AddAsync(newNotificationuser);
             await _Context.SaveChangesAsync();
             return true;
@@ -266,10 +298,10 @@ namespace LMS.Repository
         public async Task<bool> IssueNotification(int reservationNo)
         {
             var reservation = await _Context.Reservations.FirstOrDefaultAsync(e => e.Id == reservationNo);
-             
+
             if (reservation != null)
             {
-                
+
                 var Description = "The book " + reservation.ResourceId + " has been successfully issued to you. Please return it by " + reservation.DueDate + " to avoid any fines.";
                 var notification = new Notifications
                 {
@@ -292,7 +324,7 @@ namespace LMS.Repository
                 };
 
 
-                var tokens = await _Context.FirebaseConnections.Where(e => e.userName == reservation.BorrowerID).Select(e=>e.Token).ToListAsync();
+                var tokens = await _Context.FirebaseConnections.Where(e => e.userName == reservation.BorrowerID).Select(e => e.Token).ToListAsync();
                 try
                 {
                     var message = new MulticastMessage()
@@ -309,7 +341,7 @@ namespace LMS.Repository
                 }
                 catch (Exception e)
                 {
-                    
+
                 }
 
 
@@ -323,22 +355,22 @@ namespace LMS.Repository
             {
                 return false;
             }
-            
+
         }
         public async Task<bool> ReturnNotification(int reservationNo)
         {
             var reservation = await _Context.Reservations.FirstOrDefaultAsync(e => e.Id == reservationNo);
             if (reservation != null)
-            { 
+            {
                 var Description = "The book " + reservation.ResourceId + " has been successfully returned by you. Thank you for returning it on time.";
                 var notification = new Notifications
                 {
-                    Title = "Return Resource Successfully.ReservationNo : "+reservation.Id,
+                    Title = "Return Resource Successfully.ReservationNo : " + reservation.Id,
                     Description = Description,
                     ToUser = reservation.BorrowerID,
                     Date = DateOnly.FromDateTime(DateTime.Now),
                     time = TimeOnly.FromDateTime(DateTime.Now),
-                    Type="reservation"
+                    Type = "reservation"
                 };
                 await _Context.Notifications.AddAsync(notification);
                 await _Context.SaveChangesAsync();
@@ -350,7 +382,7 @@ namespace LMS.Repository
                     Status = "unread"
                 };
 
-                var tokens = await _Context.FirebaseConnections.Where(e => e.userName == reservation.BorrowerID).Select(e=>e.Token).ToListAsync();
+                var tokens = await _Context.FirebaseConnections.Where(e => e.userName == reservation.BorrowerID).Select(e => e.Token).ToListAsync();
                 try
                 {
                     var message = new MulticastMessage()
@@ -367,12 +399,12 @@ namespace LMS.Repository
                 }
                 catch (Exception e)
                 {
-                    
+
                 }
-                   
-                        
-                    
-                
+
+
+
+
                 await _Context.NotificationUser.AddAsync(notificationuser);
                 await _Context.SaveChangesAsync();
                 return true;
@@ -410,47 +442,12 @@ namespace LMS.Repository
                     }
                 };
                 var response = await FirebaseMessaging.DefaultInstance.SendMulticastAsync(message);
-            }catch(Exception e)
+            }
+            catch (Exception e)
             {
-                
+
             }
             return true;
-        }
-        public async Task<bool> RemoveNotification(int id)
-        {
-            var notification = await _Context.Notifications.FirstOrDefaultAsync(e => e.Id == id);
-            if (notification != null)
-            {
-                _Context.NotificationUser.RemoveRange(_Context.NotificationUser.Where(e => e.NotificationId == id));
-                await _Context.SaveChangesAsync();
-                _Context.Notifications.Remove(notification);
-                await _Context.SaveChangesAsync();
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        public async Task<bool> MarkAsRead(int id)
-        {
-            var notification = await _Context.NotificationUser.FirstOrDefaultAsync(e => e.Id == id);
-            if (notification != null)
-            {
-                notification.Status = "read";
-                await _Context.SaveChangesAsync();
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        public async Task<int> UnreadCount(HttpContext httpContext)
-        {
-            var user = _jwtService.GetUsername(httpContext);
-            var count = await _Context.NotificationUser.CountAsync(e => e.UserName == user && e.Status == "unread");
-            return count;
         }
     }
 }

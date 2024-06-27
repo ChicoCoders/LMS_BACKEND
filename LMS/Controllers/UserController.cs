@@ -34,27 +34,27 @@ namespace LMS.Controllers
             var x = HttpContext;
             return await _userService.EditUser(edituser, x);
         }
-
+        [HttpPut("EditProfilePicture")]
+        public async Task<bool> EditProfilePicture( string image)
+        {
+            return await _userService.EditProfilePicture(HttpContext, image);
+        }
         [HttpGet("DeleteUser")]
         public async Task<bool> DeleteUser(string username)
         {
             return await _userService.DeleteUser(username);
         }
-
-
         [HttpPost("AboutUser")]
         public async Task<AboutUserDto> AboutUser(user user)
         {
             return await _userService.AboutUser(user.username);
         }
-
         [HttpPost("SearchUser")]
         public async Task<List<UserListDto>> SearchUsers(SearchUserDto searchUser)
         {
 
             return await _userService.SearchUser(searchUser);
         }
-
         [HttpPut("ChangePassword")]
         public async Task<bool> ChangePassword(ChangePasswordDto request)
         {
@@ -107,6 +107,12 @@ namespace LMS.Controllers
        public class user
         {
             public string username { get; set; }
+        }
+
+        [HttpPost("AddAdmin")]
+        public async Task<bool> AddAdmin()
+        {
+            return await _userService.AddAdmin();
         }
     }
     }

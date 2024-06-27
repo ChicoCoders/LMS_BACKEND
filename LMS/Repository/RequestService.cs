@@ -54,8 +54,8 @@ namespace LMS.Repository
                 {
                     ResourceId= request.ISBN,
                     UserId=userName,
-                    Date=new DateOnly(2023,05,01),
-                    Time=new TimeOnly(22,11)
+                    Date= DateOnly.FromDateTime(DateTime.Now),
+                    Time= TimeOnly.FromDateTime(DateTime.Now)
                 };
 
                 

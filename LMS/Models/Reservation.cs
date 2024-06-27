@@ -5,28 +5,29 @@ namespace LMS.Models
 {
     public class Reservation
     {
-      
+        [Required]
         public int Id { get; set; }
-        
+        [Required]
         public string ReservationNo { get; set; }
-        
+        [Required]
         public DateOnly IssuedDate { get; set; }
-        
+        [Required]
         public DateOnly DueDate {  get; set; }
-        
-        public DateOnly ReturnDate { get; set; }
-        
+        public DateOnly? ReturnDate { get; set; }
+        [Required]
         public string Status { get; set; }
+        [Required]
+        public int Penalty { get; set; }
         
         
         [ForeignKey(nameof(Resource))]
-        public string ResourceId {  get; set; }
+        public string? ResourceId {  get; set; }
         
         [ForeignKey(nameof(IssuedBy))]
-        public string IssuedByID { get; set; }
+        public string? IssuedByID { get; set; }
 
-       
-        public string BorrowerID { get; set; }
+        [ForeignKey(nameof(Borrower))]
+        public string? BorrowerID { get; set; }
 
 
 

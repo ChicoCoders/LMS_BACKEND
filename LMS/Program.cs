@@ -7,10 +7,11 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Hangfire;
-using Hangfire.SqlServer;
-using Microsoft.Extensions.Configuration;
 using FirebaseAdmin;
 using Google.Apis.Auth.OAuth2;
+using Quartz;
+using LMS.BackgroundJobs;
+using Quartz.Impl.Matchers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,6 +33,7 @@ builder.Services.AddScoped<ILocationService, LocationService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<JWTService>();
 builder.Services.AddScoped<RefreshTokenService>();
+
 
 
 builder.Services.AddAuthentication(options =>
@@ -71,10 +73,44 @@ builder.Services.AddCors();
 
 builder.Services.AddDbContext<DataContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("DataContext")));
+
+
+
+
+
 FirebaseApp.Create(new AppOptions()
 {
     Credential = GoogleCredential.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "serviceAccountKey.json")),
 });
+
+builder.Services.AddQuartz(q =>
+{
+    // Use a Scoped container to create jobs.
+    q.UseMicrosoftDependencyInjectionJobFactory();
+
+    // Create a job
+    var weelyjob = new JobKey("WeekJob");
+    q.AddJob<WeeklyJob>(opts => opts.WithIdentity(weelyjob));
+
+    // Create a trigger for the job
+    q.AddTrigger(opts => opts
+        .ForJob(weelyjob) // Link to the ExampleJob
+        .WithIdentity("ExampleJob-trigger") // Give the trigger a unique name
+        .WithCronSchedule("0 0 0 ? * MON")); // Every sunday 12 Am
+
+    var dailyJobKey = new JobKey("DailyJob");
+
+    // Register the daily job with the DI container
+    q.AddJob<DailyJob>(opts => opts.WithIdentity(dailyJobKey));
+
+    // Create a trigger for the daily job to run every day at 12:00 AM
+    q.AddTrigger(opts => opts
+        .ForJob(dailyJobKey) // Link to the DailyJob
+        .WithIdentity("DailyJob-trigger") // Give the trigger a unique name
+        .WithCronSchedule("0 0 0 * * ?"));
+});
+
+builder.Services.AddQuartzHostedService(q => q.WaitForJobsToComplete = true);
 
 var app = builder.Build();
 

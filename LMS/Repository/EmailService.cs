@@ -32,9 +32,6 @@ namespace LMS.Repository
                 // Set the recipient's email address
                 email.To.Add(MailboxAddress.Parse(To));
 
-
-            
-
                 // Set the email subject
                 email.Subject = Subject;
 

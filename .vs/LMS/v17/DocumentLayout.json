@@ -3,148 +3,196 @@
   "WorkspaceRootPath": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\repository\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\helpers\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\helpers\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\repository\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\repository\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\credentials\\serviceaccountkey.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\credentials\\serviceaccountkey.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\models\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\models\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\dtos\\tokens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\dtos\\tokens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\repository\\resourceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\resourceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\repository\\locationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\locationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\repository\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\controllers\\autocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\controllers\\autocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\models\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\models\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\models\\cupboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\models\\cupboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\models\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\models\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\repository\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\repository\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\emailtemplate\\emailtemplates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\emailtemplate\\emailtemplates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\repository\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\repository\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\repository\\iresourceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\iresourceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\repository\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\repository\\idashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\idashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\lms.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\lms.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\lms.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\lms.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\dtos\\dashboardstatics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\dtos\\dashboardstatics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\dtos\\aboutresourcedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\dtos\\aboutresourcedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\dtos\\userlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\dtos\\userlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\dtos\\aboutuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\dtos\\aboutuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\migrations\\20240621213253_a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\migrations\\20240621213253_a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\repository\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\helpers\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\helpers\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\helpers\\refreshtokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\helpers\\refreshtokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Migrations\\20240627092704_A.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LMS\\Migrations\\20240627092704_A.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\models\\resource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\models\\resource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\models\\notificationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\models\\notificationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Migrations\\20240627091706_a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LMS\\Migrations\\20240627091706_a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\dtos\\aboutreservationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\dtos\\aboutreservationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\repository\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\repository\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\dtos\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\dtos\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\models\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\models\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\repository\\requestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\requestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\models\\requestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\models\\requestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\models\\firebaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\models\\firebaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\emailtemplate\\emailtemplates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\emailtemplate\\emailtemplates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\repository\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\repository\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\backgroundjobs\\dailyjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\backgroundjobs\\dailyjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\dtos\\returnbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\dtos\\returnbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\backgroundjobs\\weeklyjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\backgroundjobs\\weeklyjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\repository\\resourceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\resourceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\dtos\\aboutresourcedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\dtos\\aboutresourcedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\dtos\\addbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\dtos\\addbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\dtos\\resourcelistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\dtos\\resourcelistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Migrations\\20240624034223_b.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LMS\\Migrations\\20240624034223_b.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\controllers\\autocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\controllers\\autocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\repository\\ireservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\ireservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\repository\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\controllers\\locationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\controllers\\locationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\lms.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\lms.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\serviceaccountkey.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\serviceaccountkey.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\credentials\\serviceaccountkey.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\credentials\\serviceaccountkey.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|c:\\users\\arambage k d\\desktop\\new folder (5)\\for deploy\\lms_backend - copy\\lms\\lms\\repository\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBC1D967-7E3C-46C0-A027-0F55A6E6F258}|LMS\\LMS.csproj|solutionrelative:lms\\repository\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -154,20 +202,111 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\IAuthService.cs",
-              "RelativeDocumentMoniker": "LMS\\Repository\\IAuthService.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\IAuthService.cs",
-              "RelativeToolTip": "LMS\\Repository\\IAuthService.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAYwAoAAABDAAAA",
+              "Title": "UserListDto.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\DTOs\\UserListDto.cs",
+              "RelativeDocumentMoniker": "LMS\\DTOs\\UserListDto.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\DTOs\\UserListDto.cs",
+              "RelativeToolTip": "LMS\\DTOs\\UserListDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T20:29:10.603Z",
-              "IsPinned": true
+              "WhenOpened": "2024-06-27T12:14:38.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RefreshTokenService.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Helpers\\RefreshTokenService.cs",
+              "RelativeDocumentMoniker": "LMS\\Helpers\\RefreshTokenService.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Helpers\\RefreshTokenService.cs",
+              "RelativeToolTip": "LMS\\Helpers\\RefreshTokenService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T11:56:10.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20240627092704_A.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Migrations\\20240627092704_A.cs",
+              "RelativeDocumentMoniker": "LMS\\Migrations\\20240627092704_A.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Migrations\\20240627092704_A.cs",
+              "RelativeToolTip": "LMS\\Migrations\\20240627092704_A.cs",
+              "ViewState": "AQIAAKMAAAAABAAAAAAgwMcAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T09:27:05.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20240627091706_a.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Migrations\\20240627091706_a.cs",
+              "RelativeDocumentMoniker": "LMS\\Migrations\\20240627091706_a.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Migrations\\20240627091706_a.cs",
+              "RelativeToolTip": "LMS\\Migrations\\20240627091706_a.cs",
+              "ViewState": "AQIAAE0AAAAAzszMzMwmwFUAAABYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T09:17:06.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\UserService.cs",
+              "RelativeDocumentMoniker": "LMS\\Repository\\UserService.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\UserService.cs",
+              "RelativeToolTip": "LMS\\Repository\\UserService.cs",
+              "ViewState": "AQIAAOAAAACAAAAAAAAhwO8AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T06:12:46.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "NotificationUser.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\NotificationUser.cs",
+              "RelativeDocumentMoniker": "LMS\\Models\\NotificationUser.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\NotificationUser.cs",
+              "RelativeToolTip": "LMS\\Models\\NotificationUser.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T08:22:44.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Resource.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\Resource.cs",
+              "RelativeDocumentMoniker": "LMS\\Models\\Resource.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\Resource.cs",
+              "RelativeToolTip": "LMS\\Models\\Resource.cs",
+              "ViewState": "AQIAAB4AAAAAzczMzMwEwCIAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T03:27:30.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "JWTService.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Helpers\\JWTService.cs",
+              "RelativeDocumentMoniker": "LMS\\Helpers\\JWTService.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Helpers\\JWTService.cs",
+              "RelativeToolTip": "LMS\\Helpers\\JWTService.cs",
+              "ViewState": "AQIAAAgAAAAwMzMzMzM7wFAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T13:11:58.769Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -177,74 +316,449 @@
               "RelativeDocumentMoniker": "LMS\\Repository\\AuthService.cs",
               "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\AuthService.cs",
               "RelativeToolTip": "LMS\\Repository\\AuthService.cs",
-              "ViewState": "AQIAAEEAAAAA0MzMzMz8v1UAAAAiAAAA",
+              "ViewState": "AQIAACMAAABAMzMzMzMhwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T20:28:47.49Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "RefreshToken.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\RefreshToken.cs",
-              "RelativeDocumentMoniker": "LMS\\Models\\RefreshToken.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\RefreshToken.cs",
-              "RelativeToolTip": "LMS\\Models\\RefreshToken.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAYAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T11:08:47.379Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "LMS\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "LMS\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAAA8AAADAmZmZmZkdwBoAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T19:52:44.346Z",
+              "WhenOpened": "2024-06-23T13:11:49.624Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
+              "Title": "AboutUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\DTOs\\AboutUserDto.cs",
+              "RelativeDocumentMoniker": "LMS\\DTOs\\AboutUserDto.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\DTOs\\AboutUserDto.cs",
+              "RelativeToolTip": "LMS\\DTOs\\AboutUserDto.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAA5wA0AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T08:34:17.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AboutReservationDto.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\DTOs\\AboutReservationDto.cs",
+              "RelativeDocumentMoniker": "LMS\\DTOs\\AboutReservationDto.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\DTOs\\AboutReservationDto.cs",
+              "RelativeToolTip": "LMS\\DTOs\\AboutReservationDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T19:19:52.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ReservationService.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\ReservationService.cs",
+              "RelativeDocumentMoniker": "LMS\\Repository\\ReservationService.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\ReservationService.cs",
+              "RelativeToolTip": "LMS\\Repository\\ReservationService.cs",
+              "ViewState": "AQIAAIsAAAAAzczMzMwMwI4AAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T18:57:21.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "LMS\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Controllers\\UserController.cs",
+              "RelativeToolTip": "LMS\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAFcAAADAzMzMzMw0wHUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T06:22:27.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\IUserService.cs",
+              "RelativeDocumentMoniker": "LMS\\Repository\\IUserService.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\IUserService.cs",
+              "RelativeToolTip": "LMS\\Repository\\IUserService.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAqwA4AAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T06:22:09.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CreateUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\DTOs\\CreateUserDto.cs",
+              "RelativeDocumentMoniker": "LMS\\DTOs\\CreateUserDto.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\DTOs\\CreateUserDto.cs",
+              "RelativeToolTip": "LMS\\DTOs\\CreateUserDto.cs",
+              "ViewState": "AQIAABwAAADAzMzMzMwQwCMAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T08:32:13.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "DataContext.cs",
               "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Data\\DataContext.cs",
               "RelativeDocumentMoniker": "LMS\\Data\\DataContext.cs",
               "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Data\\DataContext.cs",
               "RelativeToolTip": "LMS\\Data\\DataContext.cs",
-              "ViewState": "AQIAABcAAAAAmJmZmZnJvx4AAAAWAQAA",
+              "ViewState": "AQIAABwAAADAzMzMzMwqwCkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T08:06:01.811Z"
+              "WhenOpened": "2024-06-23T05:55:55.95Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\User.cs",
+              "RelativeDocumentMoniker": "LMS\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\User.cs",
+              "RelativeToolTip": "LMS\\Models\\User.cs",
+              "ViewState": "AQIAABkAAABAMzMzMzM1wB0AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T08:24:10.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\appsettings.json",
+              "RelativeDocumentMoniker": "LMS\\appsettings.json",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\appsettings.json",
+              "RelativeToolTip": "LMS\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAACQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-23T07:32:38.016Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Request.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\Request.cs",
+              "RelativeDocumentMoniker": "LMS\\Models\\Request.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\Request.cs",
+              "RelativeToolTip": "LMS\\Models\\Request.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T08:23:07.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\Notification.cs",
+              "RelativeDocumentMoniker": "LMS\\Models\\Notification.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\Notification.cs",
+              "RelativeToolTip": "LMS\\Models\\Notification.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAYAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T08:22:06.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "RequestService.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\RequestService.cs",
+              "RelativeDocumentMoniker": "LMS\\Repository\\RequestService.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\RequestService.cs",
+              "RelativeToolTip": "LMS\\Repository\\RequestService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T18:36:01.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Reservation.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\Reservation.cs",
+              "RelativeDocumentMoniker": "LMS\\Models\\Reservation.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\Reservation.cs",
+              "RelativeToolTip": "LMS\\Models\\Reservation.cs",
+              "ViewState": "AQIAAA8AAACAmZmZmZkwwBsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T19:11:17.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "RequestDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\RequestDTO.cs",
+              "RelativeDocumentMoniker": "LMS\\Models\\RequestDTO.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\RequestDTO.cs",
+              "RelativeToolTip": "LMS\\Models\\RequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T08:23:17.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "NotificationService.cs",
               "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\NotificationService.cs",
               "RelativeDocumentMoniker": "LMS\\Repository\\NotificationService.cs",
               "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\NotificationService.cs",
               "RelativeToolTip": "LMS\\Repository\\NotificationService.cs",
-              "ViewState": "AQIAAAQAAACAMTMzMzMLwFYAAAA1AAAA",
+              "ViewState": "AQIAABkAAAAAz8zMzMwmwEQAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T10:23:37.999Z"
+              "WhenOpened": "2024-06-23T06:24:46.538Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 28,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "LMS\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\WeatherForecast.cs",
+              "RelativeToolTip": "LMS\\WeatherForecast.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T06:50:42.996Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "EmailTemplates.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\EmailTemplate\\EmailTemplates.cs",
+              "RelativeDocumentMoniker": "LMS\\EmailTemplate\\EmailTemplates.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\EmailTemplate\\EmailTemplates.cs",
+              "RelativeToolTip": "LMS\\EmailTemplate\\EmailTemplates.cs",
+              "ViewState": "AQIAADUBAAAAZ2ZmZmYswHYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T06:20:36.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "FirebaseConnection.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\FirebaseConnection.cs",
+              "RelativeDocumentMoniker": "LMS\\Models\\FirebaseConnection.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\FirebaseConnection.cs",
+              "RelativeToolTip": "LMS\\Models\\FirebaseConnection.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T06:30:17.529Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "LMS\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "LMS\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T06:50:54.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "INotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\INotificationService.cs",
+              "RelativeDocumentMoniker": "LMS\\Repository\\INotificationService.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\INotificationService.cs",
+              "RelativeToolTip": "LMS\\Repository\\INotificationService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T09:22:40.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Program.cs",
+              "RelativeDocumentMoniker": "LMS\\Program.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Program.cs",
+              "RelativeToolTip": "LMS\\Program.cs",
+              "ViewState": "AQIAADsAAAAAMzMzMzMbwGIAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T05:58:34.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "DailyJob.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\BackgroundJobs\\DailyJob.cs",
+              "RelativeDocumentMoniker": "LMS\\BackgroundJobs\\DailyJob.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\BackgroundJobs\\DailyJob.cs",
+              "RelativeToolTip": "LMS\\BackgroundJobs\\DailyJob.cs",
+              "ViewState": "AQIAAAgAAABgZmZmZmY4wBEAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T18:44:33.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ReservationController.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Controllers\\ReservationController.cs",
+              "RelativeDocumentMoniker": "LMS\\Controllers\\ReservationController.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Controllers\\ReservationController.cs",
+              "RelativeToolTip": "LMS\\Controllers\\ReservationController.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAAACAAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T05:27:35.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "WeeklyJob.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\BackgroundJobs\\WeeklyJob.cs",
+              "RelativeDocumentMoniker": "LMS\\BackgroundJobs\\WeeklyJob.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\BackgroundJobs\\WeeklyJob.cs",
+              "RelativeToolTip": "LMS\\BackgroundJobs\\WeeklyJob.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T17:59:33.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
               "Title": "ResourceService.cs",
               "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\ResourceService.cs",
               "RelativeDocumentMoniker": "LMS\\Repository\\ResourceService.cs",
               "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\ResourceService.cs",
               "RelativeToolTip": "LMS\\Repository\\ResourceService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAOoAAABIAAAA",
+              "ViewState": "AQIAANIAAAAAyczMzMwQwOEAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T19:15:56.269Z"
+              "WhenOpened": "2024-06-23T05:53:33.363Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 32,
+              "Title": "ReturnBookDto.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\DTOs\\ReturnBookDto.cs",
+              "RelativeDocumentMoniker": "LMS\\DTOs\\ReturnBookDto.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\DTOs\\ReturnBookDto.cs",
+              "RelativeToolTip": "LMS\\DTOs\\ReturnBookDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T19:12:56.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "AboutResourceDto.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\DTOs\\AboutResourceDto.cs",
+              "RelativeDocumentMoniker": "LMS\\DTOs\\AboutResourceDto.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\DTOs\\AboutResourceDto.cs",
+              "RelativeToolTip": "LMS\\DTOs\\AboutResourceDto.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAA4wBMAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T06:00:00.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "AddBookDto.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\DTOs\\AddBookDto.cs",
+              "RelativeDocumentMoniker": "LMS\\DTOs\\AddBookDto.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\DTOs\\AddBookDto.cs",
+              "RelativeToolTip": "LMS\\DTOs\\AddBookDto.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAA6wA4AAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T03:29:29.131Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ResourceListDto.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\DTOs\\ResourceListDto.cs",
+              "RelativeDocumentMoniker": "LMS\\DTOs\\ResourceListDto.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\DTOs\\ResourceListDto.cs",
+              "RelativeToolTip": "LMS\\DTOs\\ResourceListDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T03:30:58.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "20240624034223_b.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Migrations\\20240624034223_b.cs",
+              "RelativeDocumentMoniker": "LMS\\Migrations\\20240624034223_b.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Migrations\\20240624034223_b.cs",
+              "RelativeToolTip": "LMS\\Migrations\\20240624034223_b.cs",
+              "ViewState": "AQIAAF0AAAAAaGZmZmYSwGcAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T03:42:23.819Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "AutoController.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Controllers\\AutoController.cs",
+              "RelativeDocumentMoniker": "LMS\\Controllers\\AutoController.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Controllers\\AutoController.cs",
+              "RelativeToolTip": "LMS\\Controllers\\AutoController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T03:22:17.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "IReservationService.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\IReservationService.cs",
+              "RelativeDocumentMoniker": "LMS\\Repository\\IReservationService.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\IReservationService.cs",
+              "RelativeToolTip": "LMS\\Repository\\IReservationService.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwA8AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T19:38:36.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "DashboardService.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\DashboardService.cs",
+              "RelativeDocumentMoniker": "LMS\\Repository\\DashboardService.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\DashboardService.cs",
+              "RelativeToolTip": "LMS\\Repository\\DashboardService.cs",
+              "ViewState": "AQIAAGUAAAAAAgAAAAAIwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T19:32:51.342Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "LocationController.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Controllers\\LocationController.cs",
+              "RelativeDocumentMoniker": "LMS\\Controllers\\LocationController.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Controllers\\LocationController.cs",
+              "RelativeToolTip": "LMS\\Controllers\\LocationController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T18:56:28.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "LMS.csproj",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\LMS.csproj",
+              "RelativeDocumentMoniker": "LMS\\LMS.csproj",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\LMS.csproj",
+              "RelativeToolTip": "LMS\\LMS.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-06-23T17:58:22.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "serviceAccountKey.json",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\serviceAccountKey.json",
+              "RelativeDocumentMoniker": "LMS\\serviceAccountKey.json",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\serviceAccountKey.json",
+              "RelativeToolTip": "LMS\\serviceAccountKey.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-23T07:31:13.847Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
               "Title": "serviceAccountKey.json",
               "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Credentials\\serviceAccountKey.json",
               "RelativeDocumentMoniker": "LMS\\Credentials\\serviceAccountKey.json",
@@ -252,342 +766,31 @@
               "RelativeToolTip": "LMS\\Credentials\\serviceAccountKey.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-17T14:22:00.192Z"
+              "WhenOpened": "2024-06-23T07:30:40.058Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "JWTService.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Helpers\\JWTService.cs",
-              "RelativeDocumentMoniker": "LMS\\Helpers\\JWTService.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Helpers\\JWTService.cs",
-              "RelativeToolTip": "LMS\\Helpers\\JWTService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAcwCQAAABFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T13:47:52.804Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Tokens.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\DTOs\\Tokens.cs",
-              "RelativeDocumentMoniker": "LMS\\DTOs\\Tokens.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\DTOs\\Tokens.cs",
-              "RelativeToolTip": "LMS\\DTOs\\Tokens.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T20:40:25.58Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "20240621213253_a.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Migrations\\20240621213253_a.cs",
-              "RelativeDocumentMoniker": "LMS\\Migrations\\20240621213253_a.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Migrations\\20240621213253_a.cs",
-              "RelativeToolTip": "LMS\\Migrations\\20240621213253_a.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T21:32:54.02Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\appsettings.json",
-              "RelativeDocumentMoniker": "LMS\\appsettings.json",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\appsettings.json",
-              "RelativeToolTip": "LMS\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAQAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-16T08:00:24.609Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "LocationService.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\LocationService.cs",
-              "RelativeDocumentMoniker": "LMS\\Repository\\LocationService.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\LocationService.cs",
-              "RelativeToolTip": "LMS\\Repository\\LocationService.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAQwE8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T07:28:53.36Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Program.cs",
-              "RelativeDocumentMoniker": "LMS\\Program.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Program.cs",
-              "RelativeToolTip": "LMS\\Program.cs",
-              "ViewState": "AQIAAC4AAAAANjMzMzMbwB8AAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T08:23:45.773Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\User.cs",
-              "RelativeDocumentMoniker": "LMS\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\User.cs",
-              "RelativeToolTip": "LMS\\Models\\User.cs",
-              "ViewState": "AQIAAB4AAADA//////8jwCEAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T07:54:02.602Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "LMS\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Controllers\\UserController.cs",
-              "RelativeToolTip": "LMS\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAEoAAAAAmpmZmZkpwGcAAABQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T15:52:22.521Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\IUserService.cs",
-              "RelativeDocumentMoniker": "LMS\\Repository\\IUserService.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\IUserService.cs",
-              "RelativeToolTip": "LMS\\Repository\\IUserService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T08:24:20.442Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Connection.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\Connection.cs",
-              "RelativeDocumentMoniker": "LMS\\Models\\Connection.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\Connection.cs",
-              "RelativeToolTip": "LMS\\Models\\Connection.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T11:03:36.837Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Location.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\Location.cs",
-              "RelativeDocumentMoniker": "LMS\\Models\\Location.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\Location.cs",
-              "RelativeToolTip": "LMS\\Models\\Location.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAAAA0AAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T11:03:58.371Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Cupboard.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\Cupboard.cs",
-              "RelativeDocumentMoniker": "LMS\\Models\\Cupboard.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Models\\Cupboard.cs",
-              "RelativeToolTip": "LMS\\Models\\Cupboard.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T11:04:24.396Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AutoController.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Controllers\\AutoController.cs",
-              "RelativeDocumentMoniker": "LMS\\Controllers\\AutoController.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Controllers\\AutoController.cs",
-              "RelativeToolTip": "LMS\\Controllers\\AutoController.cs",
-              "ViewState": "AQIAABMAAACAmZmZmZklwB0AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T18:58:04.306Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "EmailTemplates.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\EmailTemplate\\EmailTemplates.cs",
-              "RelativeDocumentMoniker": "LMS\\EmailTemplate\\EmailTemplates.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\EmailTemplate\\EmailTemplates.cs",
-              "RelativeToolTip": "LMS\\EmailTemplate\\EmailTemplates.cs",
-              "ViewState": "AQIAAC8BAAAAlpmZmZkBwDcBAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T18:32:38.096Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "ReservationService.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\ReservationService.cs",
-              "RelativeDocumentMoniker": "LMS\\Repository\\ReservationService.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\ReservationService.cs",
-              "RelativeToolTip": "LMS\\Repository\\ReservationService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFwBAABWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T16:36:10.907Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\EmailService.cs",
-              "RelativeDocumentMoniker": "LMS\\Repository\\EmailService.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\EmailService.cs",
-              "RelativeToolTip": "LMS\\Repository\\EmailService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T10:21:31.17Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "INotificationService.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\INotificationService.cs",
-              "RelativeDocumentMoniker": "LMS\\Repository\\INotificationService.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\INotificationService.cs",
-              "RelativeToolTip": "LMS\\Repository\\INotificationService.cs",
-              "ViewState": "AQIAAAMAAABgZmZmZmYkwBEAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T20:10:54.883Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\UserService.cs",
-              "RelativeDocumentMoniker": "LMS\\Repository\\UserService.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\UserService.cs",
-              "RelativeToolTip": "LMS\\Repository\\UserService.cs",
-              "ViewState": "AQIAAD4BAAAANDMzMzMfwFkBAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T15:51:49.309Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "DashboardService.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\DashboardService.cs",
-              "RelativeDocumentMoniker": "LMS\\Repository\\DashboardService.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\DashboardService.cs",
-              "RelativeToolTip": "LMS\\Repository\\DashboardService.cs",
-              "ViewState": "AQIAAFoAAADAzMzMzMwwwH8AAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T07:20:51.831Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "IDashboardService.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\IDashboardService.cs",
-              "RelativeDocumentMoniker": "LMS\\Repository\\IDashboardService.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\IDashboardService.cs",
-              "RelativeToolTip": "LMS\\Repository\\IDashboardService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T15:55:51.145Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "IResourceService.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\IResourceService.cs",
-              "RelativeDocumentMoniker": "LMS\\Repository\\IResourceService.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\IResourceService.cs",
-              "RelativeToolTip": "LMS\\Repository\\IResourceService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T04:30:28.555Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "LMS.csproj",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\LMS.csproj",
-              "RelativeDocumentMoniker": "LMS\\LMS.csproj",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\LMS.csproj",
-              "RelativeToolTip": "LMS\\LMS.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-17T16:42:01.392Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "DashboardStatics.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\DTOs\\DashboardStatics.cs",
-              "RelativeDocumentMoniker": "LMS\\DTOs\\DashboardStatics.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\DTOs\\DashboardStatics.cs",
-              "RelativeToolTip": "LMS\\DTOs\\DashboardStatics.cs",
-              "ViewState": "AQIAAAwAAACAmZmZmZkVwBIAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T07:30:31.257Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "DashboardController.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Controllers\\DashboardController.cs",
-              "RelativeDocumentMoniker": "LMS\\Controllers\\DashboardController.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Controllers\\DashboardController.cs",
-              "RelativeToolTip": "LMS\\Controllers\\DashboardController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T15:56:11.143Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "LMS",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\LMS.csproj",
-              "RelativeDocumentMoniker": "LMS\\LMS.csproj",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\LMS.csproj",
-              "RelativeToolTip": "LMS\\LMS.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-17T16:42:18.701Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 46,
               "Title": "NotificationController.cs",
               "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Controllers\\NotificationController.cs",
               "RelativeDocumentMoniker": "LMS\\Controllers\\NotificationController.cs",
               "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Controllers\\NotificationController.cs",
               "RelativeToolTip": "LMS\\Controllers\\NotificationController.cs",
-              "ViewState": "AQIAADcAAAAAaGZmZmb2v0cAAABMAAAA",
+              "ViewState": "AQIAAB8AAAAAMjMzMzMDwDkAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T20:11:26.84Z"
+              "WhenOpened": "2024-06-23T07:17:55.14Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "AboutResourceDto.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\DTOs\\AboutResourceDto.cs",
-              "RelativeDocumentMoniker": "LMS\\DTOs\\AboutResourceDto.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\DTOs\\AboutResourceDto.cs",
-              "RelativeToolTip": "LMS\\DTOs\\AboutResourceDto.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAA1wA4AAAAVAAAA",
+              "DocumentIndex": 47,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\EmailService.cs",
+              "RelativeDocumentMoniker": "LMS\\Repository\\EmailService.cs",
+              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\Repository\\EmailService.cs",
+              "RelativeToolTip": "LMS\\Repository\\EmailService.cs",
+              "ViewState": "AQIAAA8AAABAZmZmZmYSwBQAAABXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T06:02:53.189Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "AboutUserDto.cs",
-              "DocumentMoniker": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\DTOs\\AboutUserDto.cs",
-              "RelativeDocumentMoniker": "LMS\\DTOs\\AboutUserDto.cs",
-              "ToolTip": "C:\\Users\\Arambage K D\\Desktop\\New folder (5)\\For Deploy\\LMS_BackEnd - Copy\\LMS\\LMS\\DTOs\\AboutUserDto.cs",
-              "RelativeToolTip": "LMS\\DTOs\\AboutUserDto.cs",
-              "ViewState": "AQIAAAkAAADQzMzMzMw6wBMAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T16:19:15.142Z"
+              "WhenOpened": "2024-06-23T06:15:33.702Z"
             }
           ]
         }

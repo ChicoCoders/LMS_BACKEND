@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using LMS.Models;
+using LMS.Repository;
+using Microsoft.EntityFrameworkCore;
 using System.Reflection.Emit;
 
 namespace LMS.Data
@@ -28,7 +30,7 @@ namespace LMS.Data
         {
            
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer("Server=tcp:easylibro.database.windows.net,1433;Initial Catalog=easylibro;Persist Security Info=False;User ID=easylibro;Password=kavidil2001#;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            optionsBuilder.UseSqlServer("Data Source=SQL8005.site4now.net;Initial Catalog=db_aa9686_easylibro;User Id=db_aa9686_easylibro_admin;Password=kavidil2001");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

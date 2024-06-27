@@ -13,7 +13,6 @@
         public string CupboardId { get; set; }
         public string ShelfNo { get; set; }
         public string Description {  get; set; }
-       // public DateTime AddededOn {  get; set; }
         public string ImagePath {  get; set; }
         public string URL { get; set; }
 

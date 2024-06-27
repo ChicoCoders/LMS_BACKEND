@@ -46,6 +46,11 @@ C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\L
 C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\obj\Release\net8.0\linux-x64\PubTmp\Out\Newtonsoft.Json.dll
 C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\obj\Release\net8.0\linux-x64\PubTmp\Out\NgrokAspNetCore.Lib.dll
 C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\obj\Release\net8.0\linux-x64\PubTmp\Out\Owin.dll
+C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\obj\Release\net8.0\linux-x64\PubTmp\Out\Quartz.dll
+C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\obj\Release\net8.0\linux-x64\PubTmp\Out\Quartz.Extensions.DependencyInjection.dll
+C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\obj\Release\net8.0\linux-x64\PubTmp\Out\Quartz.Extensions.Hosting.dll
+C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\obj\Release\net8.0\linux-x64\PubTmp\Out\Quartz.Jobs.dll
+C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\obj\Release\net8.0\linux-x64\PubTmp\Out\Quartz.Serialization.Json.dll
 C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\obj\Release\net8.0\linux-x64\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\obj\Release\net8.0\linux-x64\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Arambage K D\Desktop\New folder (5)\For Deploy\LMS_BackEnd - Copy\LMS\LMS\obj\Release\net8.0\linux-x64\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
